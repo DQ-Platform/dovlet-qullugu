@@ -38,22 +38,53 @@ header p{
 nav{
     display:flex;
     justify-content:center;
+    align-items:center;
     flex-wrap:wrap;
-    gap:20px;
+    gap:15px;
     padding:15px;
     background:#16284b;
 }
 
-nav a{
+nav a, nav button{
     color:#fff;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
+    background: transparent;
+    border: none;
+    font-size: 15px;
     cursor: pointer;
+    font-family: Arial, sans-serif;
 }
 
-nav a:hover{
+nav a:hover, nav button:hover{
     color:#ffd700;
+}
+
+.nav-btn {
+    background: #ffd700 !important;
+    color: #000 !important;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px !important;
+}
+
+.nav-btn:hover {
+    background: #ffb700 !important;
+    color: #000 !important;
+}
+
+.nav-btn-outline {
+    border: 2px solid #ffd700 !important;
+    color: #ffd700 !important;
+    padding: 6px 13px;
+    border-radius: 6px;
+    font-size: 14px !important;
+}
+
+.nav-btn-outline:hover {
+    background: #ffd700 !important;
+    color: #000 !important;
 }
 
 .hero{
@@ -213,6 +244,16 @@ footer{
     <a onclick="showSection('materials')">Materiallar</a>
     <a href="https://www.instagram.com/ys.imanoff" target="_blank">İnstagram</a>
     <a href="https://wa.me/qr/2OLYZXD45JFZO1" target="_blank">WhatsApp</a>
+    
+    <!-- Yuxarı Menyuda Qeydiyyat/Daxil ol və ya Şəxsi Kabinet Düymələri -->
+    <span id="auth-nav-buttons">
+        <button class="nav-btn-outline" onclick="openModal('login')">Daxil ol</button>
+        <button class="nav-btn" onclick="openModal('register')">Qeydiyyat</button>
+    </span>
+    <span id="user-nav-buttons" style="display:none;">
+        <button class="nav-btn" onclick="showSection('profile')">👤 Kabinet</button>
+        <button class="nav-btn-outline" onclick="logout()" style="border-color: #ff4d4d !important; color: #ff4d4d !important;">Çıxış</button>
+    </span>
 </nav>
 
 <!-- ƏSAS SƏHİFƏ -->
@@ -220,16 +261,6 @@ footer{
     <section class="hero">
         <h2>Dövlət qulluğuna birlikdə hazırlaşaq</h2>
         <p>Onlayn testlar, PDF materiallar və gündəlik xəbərlə bir addım öndə ol.</p>
-        
-        <!-- Dinamik İdarəetmə Düymələri -->
-        <div id="auth-buttons" style="margin-bottom: 20px;">
-            <button class="btn" onclick="openModal('register')">Qeydiyyatdan keç</button>
-            <button class="btn btn-outline" onclick="openModal('login')">Daxil ol</button>
-        </div>
-        <div id="user-nav-btn" style="display:none; margin-bottom: 20px;">
-            <button class="btn" onclick="showSection('profile')">👤 Şəxsi Kabinet</button>
-            <button class="btn btn-outline" onclick="logout()" style="color: #ff4d4d; border-color: #ff4d4d;">Çıxış et</button>
-        </div>
 
         <div>
             <a href="https://t.me/dovlettqullugu" class="btn">📢 Telegram Kanal</a>
@@ -331,13 +362,13 @@ footer{
     function checkUserSession() {
         const user = JSON.parse(localStorage.getItem('dq_user'));
         if(user) {
-            document.getElementById('auth-buttons').style.display = 'none';
-            document.getElementById('user-nav-btn').style.display = 'block';
+            document.getElementById('auth-nav-buttons').style.display = 'none';
+            document.getElementById('user-nav-buttons').style.display = 'inline-block';
             document.getElementById('profile-name').innerText = user.name;
             document.getElementById('profile-contact').innerText = user.contact;
         } else {
-            document.getElementById('auth-buttons').style.display = 'block';
-            document.getElementById('user-nav-btn').style.display = 'none';
+            document.getElementById('auth-nav-buttons').style.display = 'inline-block';
+            document.getElementById('user-nav-buttons').style.display = 'none';
         }
     }
 
@@ -369,3 +400,4 @@ footer{
 
 </body>
 </html>
+
