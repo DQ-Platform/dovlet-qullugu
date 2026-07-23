@@ -166,19 +166,11 @@ nav a:hover, nav button:hover{
 
 .question-block {
     background: #0b1220;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border: 1px solid #1c315e;
     text-align: center;
-}
-
-.question-block p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffd700;
-    margin-bottom: 15px;
-    text-align: left;
 }
 
 .question-img {
@@ -188,6 +180,7 @@ nav a:hover, nav button:hover{
     border: 2px solid #ffd700;
     background: #fff;
     padding: 5px;
+    margin-top: 10px;
 }
 
 /* Cavab Kartı */
@@ -208,7 +201,7 @@ nav a:hover, nav button:hover{
 
 .answer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 12px;
 }
 
@@ -229,7 +222,7 @@ nav a:hover, nav button:hover{
 
 .options-group {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 .options-group label {
@@ -240,6 +233,7 @@ nav a:hover, nav button:hover{
     padding: 4px 8px;
     border-radius: 4px;
     transition: 0.2s;
+    font-size: 14px;
 }
 
 .options-group input {
@@ -428,7 +422,7 @@ footer{
         <h2 id="test-title-heading" style="color:#ffd700; text-align:center; margin-bottom:20px;">Sınaq / Test</h2>
         
         <form id="logicQuizForm" onsubmit="submitQuiz(event)">
-            <!-- Suallar və Şəkillər Burada Görünəcək -->
+            <!-- Sualların Şəkilləri Burada Ardıcıl Görünəcək -->
             <div id="questions-container"></div>
 
             <!-- CAVAB KARTI BÖLMƏSİ -->
@@ -479,46 +473,24 @@ footer{
 </footer>
 
 <script>
+    // Göndərdiyiniz düzgün cavab açarları
     const correctAnswers = {
-        1: 'c', 2: 'c', 3: 'c', 4: 'e', 5: 'b',
-        6: 'a', 7: 'd', 8: 'c', 9: 'c', 10: 'e',
-        11: 'c', 12: 'd', 13: 'b', 14: 'a', 15: 'c',
-        16: 'b', 17: 'b', 18: 'b', 19: 'c', 20: 'c',
-        21: 'e', 22: 'c', 23: 'c', 24: 'b', 25: 'b',
-        26: 'd', 27: 'c', 28: 'd', 29: 'c', 30: 'c'
+        1: 'c', 2: 'b', 3: 'a', 4: 'd', 5: 'c', 
+        6: 'c', 7: 'a', 8: 'c', 9: 'e', 10: 'e', 
+        11: 'e', 12: 'd', 13: 'd', 14: 'd', 15: 'a', 
+        16: 'a', 17: 'b', 18: 'b', 19: 'e', 20: 'c', 
+        21: 'e', 22: 'c', 23: 'c', 24: 'a', 25: 'a', 
+        26: 'e', 27: 'b', 28: 'e', 29: 'd', 30: 'c'
     };
 
-    const questionsData = [
-        { q: "1. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin: 89, 55, 34, ?, ?, 8, 5, 3, 2, 1", img: "1001304240_2.jpg" },
-        { q: "2. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin:", img: "1001304240_2.jpg" },
-        { q: "3. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin:", img: "1001304240_2.jpg" },
-        { q: "4. Xanalara 1, 2, 3 və 4 ədədlərini elə yerləşdirin ki... Şərtə əsasən düzgün olan münasibətləri seçin.", img: "1001304240_2.jpg" },
-        { q: "5. Verilmiş hitoridə bəzi xanaları elə qarayın ki... Sağdan 1-ci sütundakı rənglənməmiş xanaların üzərində yazılan hərfləri seçin.", img: "1001304240_2.jpg" },
-        { q: "6. Aşağıdakı şəkildə qırmızı kvadratlardan başlayaraq istənilən istiqamətdə... 5 kvadratlı komplekslərin sayını müəyyən edin.", img: "1001304243_2.jpg" },
-        { q: "7. Tərəfləri 9 sm və 15 sm olan düzbucaqlılardan ən azı neçəsini birləşdirmək lazımdır ki, kvadrat alınsın?", img: "1001304243_2.jpg" },
-        { q: "8. Magistraturaya hazırlıq kursunun məntiq, informatika və xarici dil üzrə cəmi 67 dinləyicisi var... Neçə nəfər hər üç fənnin dinləyicisidir?", img: "1001304243_2.jpg" },
-        { q: "9. Arzu, Təhminə, Əminə, Kəmalə və Nərminə adlı rəfiqələr müxtəlif dərnəklərə gedirlər... Əminə hansı dərnəyə gedir?", img: "1001304243_2.jpg" },
-        { q: "10. Eyni hərflərin eyni, fərqli hərflərin isə fərqli rəqəmlərə uyğun olduğunu bilərək “?” əvəzinə uyğun olan variantı seçin:", img: "1001304243_2.jpg" },
-        { q: "11. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin:", img: "1001304243_2.jpg" },
-        { q: "12. Qaranlıq bir gecədə A, B, C və D adlı 4 tədqiqatçı körpünü keçməyə məcbur oldu... Ən tez neçə dəqiqəyə hər kəs körpünün digər tərəfində olar?", img: "1001304246_2.jpg" },
-        { q: "13. Aşağıdakı diaqramda müxtəlif yaş qruplarından olan şəxslərin televiziya proqramlarına həftəlik ayırdığı vaxt verilmişdir. Doğru variantları seçin:", img: "1001304246_2.jpg" },
-        { q: "14. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin:", img: "1001304246_2.jpg" },
-        { q: "15. Yusifin 2 il bundan sonrakı yaşı Muradın 4 il bundan əvvəlki yaşından 5 dəfə çoxdur. İndi onların yaşlarının cəmi 20-dirsə, Yusifin neçə yaşı var?", img: "1001304246_2.jpg" },
-        { q: "16. 3000 manat məbləğində pul mükafatı yarışda birinci, ikinci və üçüncü yeri tutan iştirakçılar arasında uyğun olaraq 3:2:1 nisbətində bölüşdürüldü. İkinci yerin sahibi neçə manat mükafat əldə etdi?", img: "1001304246_2.jpg" },
-        { q: "17. Firmaya 30 nəfər yeni işçi qəbul edildi. Əgər bunun əvəzinə 30 nəfər işdən azad edilsə idi, firmada indikindən 5 dəfə az işçi olardı. Yeni işçi götürməzdən əvvəl firmada işçilərin sayı neçə idi?", img: "1001304246_2.jpg" },
-        { q: "18. Hərf sırası pozulmuş beş sözdən dördü arasında məntiqi əlaqə var. Hərf sırasını bərpa edərək fərqli sözü tapın.", img: "1001304249_2.jpg" },
-        { q: "19. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin:", img: "1001304249_2.jpg" },
-        { q: "20. Verilən kuba uyğun olan açılışı seçin.", img: "1001304249_2.jpg" },
-        { q: "21. Şəkildə hər biri bağlar vasitəsilə bir və ya neçə halqa ilə əlaqələnən 6 halqalı fiqur verimişdir... x və y ilə hansı halqalar işarələnə bilər?", img: "1001304249_2.jpg" },
-        { q: "22. Kiçik kvadratın sahəsini 1 sahə vahidi kimi qəbul edərək rənglənmiş hissənin sahəsinin neçə sahə vahidi olduğunu müəyyənləşdirin.", img: "1001304249_2.jpg" },
-        { q: "23. “?” əvəzinə hansı ədəd yazılmalıdır?", img: "1001304249_2.jpg" },
-        { q: "24. Hansı 2 hissənin birləşməsindən kvadrat alınar?", img: "1001304252_2.jpg" },
-        { q: "25. Qanunauyğunluğu müəyyən edin və “?” əvəzinə uyğun olan variantı seçin:", img: "1001304252_2.jpg" },
-        { q: "26. “?” əvəzinə hansı ədəd yazılmalıdır?", img: "1001304252_2.jpg" },
-        { q: "27. Qatlanmış rəngli kağızda kəsiklər edilib. Fikrən kağızı açın və açılışa uyğun olan variantı seçin.", img: "1001304252_2.jpg" },
-        { q: "28. Şəkil əvvəlcə 1-1, sonra 2-2, ardınca 3-3 və nəhayət 4-4 xətləri üzrə qatlanır. “?” işarəsinin yerində alınacaq vəziyyəti müəyyən edin.", img: "1001304252_2.jpg" },
-        { q: "29. Vakant iş yerinə qəbul olunmaq üçün sənəd qəbulunun ikinci günü birinci günü ilə müqayisədə 5 dəfə çox kişi və 2 dəfə çox qadın müraciət edib... Hansı mütləq doğrudur?", img: "1001304255_2.jpg" },
-        { q: "30. Küçədəki 50 evin qapısı 1-dən başlayaraq 50-yə qədər nömrələnib. Bu nömrələmə zamanı neçə dəfə “3” rəqəmindən istifadə olunmuşdur?", img: "1001304255_2.jpg" }
+    // Sınaq şəkillərinin massivi (göndərdiyiniz 6 şəkil)
+    const quizImages = [
+        "1001304240_3.jpg",
+        "1001304243_3.jpg",
+        "1001304246_3.jpg",
+        "1001304249_3.jpg",
+        "1001304252_3.jpg",
+        "1001304255_3.jpg"
     ];
 
     function generateQuiz() {
@@ -528,19 +500,18 @@ footer{
         let qHtml = '';
         let sheetHtml = '';
 
-        questionsData.forEach((item, index) => {
-            let i = index + 1;
-            let imgTag = item.img ? `<img src="${item.img}" class="question-img" alt="Sual ${i}">` : '';
-            
-            // 1. Sualların vizual hissəsi
+        // 1. Şəkilləri səhifəyə ardıcıl əlavə edirik
+        quizImages.forEach((imgSrc, index) => {
             qHtml += `
                 <div class="question-block">
-                    <p>${item.q}</p>
-                    ${imgTag}
+                    <p style="color: #ffd700; font-weight: bold; margin-bottom: 8px; text-align: left;">Səhifə ${index + 1}</p>
+                    <img src="${imgSrc}" class="question-img" alt="Sınaq səhifəsi ${index + 1}">
                 </div>
             `;
+        });
 
-            // 2. Cavab kartı hissəsi
+        // 2. 1-dən 30-a qədər Cavab Kartı yaradırıq
+        for(let i = 1; i <= 30; i++) {
             sheetHtml += `
                 <div class="answer-row">
                     <span>Sual ${i}:</span>
@@ -553,7 +524,7 @@ footer{
                     </div>
                 </div>
             `;
-        });
+        }
 
         questionsContainer.innerHTML = qHtml;
         answerSheetGrid.innerHTML = sheetHtml;
@@ -715,3 +686,4 @@ footer{
 
 </body>
 </html>
+
