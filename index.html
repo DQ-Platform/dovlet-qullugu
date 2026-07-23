@@ -359,7 +359,7 @@ footer{
                 <p style="font-size: 13px; color: #ddd; margin-top: 8px; font-weight: normal;">Fənlər üzrə testlər</p>
             </div>
             <div class="card">
-                <p>YENİLİKLƏR</p>
+                <p>YENİLİklƏR</p>
                 <p style="font-size: 13px; color: #ddd; margin-top: 8px; font-weight: normal;">Elanlar və xəbərlər</p>
             </div>
             <div class="card">
@@ -422,7 +422,7 @@ footer{
         <h2 id="test-title-heading" style="color:#ffd700; text-align:center; margin-bottom:20px;">Sınaq / Test</h2>
         
         <form id="logicQuizForm" onsubmit="submitQuiz(event)">
-            <!-- Sualların Şəkilləri Burada Ardıcıl Görünəcək -->
+            <!-- Yüklədiyiniz 6 səhifə şəkli burada ardıcıl görünəcək -->
             <div id="questions-container"></div>
 
             <!-- CAVAB KARTI BÖLMƏSİ -->
@@ -473,7 +473,6 @@ footer{
 </footer>
 
 <script>
-    // Göndərdiyiniz düzgün cavab açarları
     const correctAnswers = {
         1: 'c', 2: 'b', 3: 'a', 4: 'd', 5: 'c', 
         6: 'c', 7: 'a', 8: 'c', 9: 'e', 10: 'e', 
@@ -483,14 +482,13 @@ footer{
         26: 'e', 27: 'b', 28: 'e', 29: 'd', 30: 'c'
     };
 
-    // Sınaq şəkillərinin massivi (göndərdiyiniz 6 şəkil)
     const quizImages = [
-        "1001304240_3.jpg",
-        "1001304243_3.jpg",
-        "1001304246_3.jpg",
-        "1001304249_3.jpg",
-        "1001304252_3.jpg",
-        "1001304255_3.jpg"
+        "Screenshot_20260723_161047_Word.jpg",
+        "Screenshot_20260723_161103_Word.jpg",
+        "Screenshot_20260723_161117_Word.jpg",
+        "Screenshot_20260723_161127_Word.jpg",
+        "Screenshot_20260723_161138_Word.jpg",
+        "Screenshot_20260723_161149_Word.jpg"
     ];
 
     function generateQuiz() {
@@ -500,7 +498,6 @@ footer{
         let qHtml = '';
         let sheetHtml = '';
 
-        // 1. Şəkilləri səhifəyə ardıcıl əlavə edirik
         quizImages.forEach((imgSrc, index) => {
             qHtml += `
                 <div class="question-block">
@@ -510,7 +507,6 @@ footer{
             `;
         });
 
-        // 2. 1-dən 30-a qədər Cavab Kartı yaradırıq
         for(let i = 1; i <= 30; i++) {
             sheetHtml += `
                 <div class="answer-row">
@@ -686,4 +682,3 @@ footer{
 
 </body>
 </html>
-
