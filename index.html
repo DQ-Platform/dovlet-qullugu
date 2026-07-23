@@ -245,7 +245,6 @@ footer{
     <a href="https://www.instagram.com/ys.imanoff" target="_blank">İnstagram</a>
     <a href="https://wa.me/qr/2OLYZXD45JFZO1" target="_blank">WhatsApp</a>
     
-    <!-- Yuxarı Menyuda Qeydiyyat/Daxil ol və ya Şəxsi Kabinet Düymələri -->
     <span id="auth-nav-buttons">
         <button class="nav-btn-outline" onclick="openModal('login')">Daxil ol</button>
         <button class="nav-btn" onclick="openModal('register')">Qeydiyyat</button>
@@ -275,7 +274,7 @@ footer{
     <section>
         <h2 style="text-align:center; color:#ffd700; font-size:32px;">Bizim Xidmətlərimiz</h2>
         <div class="cards">
-            <div class="card">
+            <div class="card" onclick="showSection('tests')" style="cursor: pointer;">
                 <img src="https://img.icons8.com/ios-filled/50/ffffff/test.png" alt="Sınaqlar">
                 <p>SINAQLAR</p>
             </div>
@@ -283,7 +282,7 @@ footer{
                 <img src="https://img.icons8.com/ios-filled/50/ffffff/news.png" alt="Yeniliklər">
                 <p>YENİLİKLƏR</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showSection('tests')" style="cursor: pointer;">
                 <img src="https://img.icons8.com/ios-filled/50/ffffff/test.png" alt="Onlayn test">
                 <p>ONLAYN TEST</p>
             </div>
@@ -292,6 +291,31 @@ footer{
                 <p>PDF MATERİAL</p>
             </div>
         </div>
+    </section>
+</div>
+
+<!-- TESTLƏR VƏ FƏNLƏR SƏHİFƏSİ -->
+<div id="tests-section" style="display:none;">
+    <section class="hero">
+        <h2 style="color:#ffd700; font-size:36px; margin-bottom:10px;">Test Fənləri</h2>
+        <p>İmtahana hazırlaşmaq istədiyiniz fənni seçin:</p>
+        
+        <div class="cards" style="max-width: 600px;">
+            <div class="card" onclick="openSubject('Azərbaycan dili')" style="cursor: pointer;">
+                <p>Azərbaycan dili</p>
+            </div>
+            <div class="card" onclick="openSubject('Məntiq')" style="cursor: pointer;">
+                <p>Məntiq</p>
+            </div>
+            <div class="card" onclick="openSubject('Qanunvericilik')" style="cursor: pointer;">
+                <p>Qanunvericilik</p>
+            </div>
+            <div class="card" onclick="openSubject('İnformatika')" style="cursor: pointer;">
+                <p>İnformatika</p>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-outline" onclick="showSection('home')">Ana səhifəyə qayıt</button>
     </section>
 </div>
 
@@ -379,20 +403,31 @@ footer{
     }
 
     function showSection(sectionName) {
+        // Bölmələri gizlədək
+        document.getElementById('home-section').style.display = 'none';
+        document.getElementById('tests-section').style.display = 'none';
+        document.getElementById('profile-section').style.display = 'none';
+
         if(sectionName === 'home') {
             document.getElementById('home-section').style.display = 'block';
-            document.getElementById('profile-section').style.display = 'none';
+        } else if(sectionName === 'tests') {
+            document.getElementById('tests-section').style.display = 'block';
         } else if(sectionName === 'profile') {
             const user = JSON.parse(localStorage.getItem('dq_user'));
             if(!user) {
                 openModal('login');
+                document.getElementById('home-section').style.display = 'block';
                 return;
             }
-            document.getElementById('home-section').style.display = 'none';
             document.getElementById('profile-section').style.display = 'block';
         } else {
             alert(sectionName.toUpperCase() + ' bölməsi tezliklə aktiv olacaq!');
+            document.getElementById('home-section').style.display = 'block';
         }
+    }
+
+    function openSubject(subjectName) {
+        alert(subjectName + " fənni üzrə testlər tezliklə əlavə olunacaq!");
     }
 
     window.onload = checkUserSession;
@@ -400,4 +435,3 @@ footer{
 
 </body>
 </html>
-
