@@ -253,16 +253,59 @@ nav a:hover, nav button:hover{
     color: #000;
 }
 
-/* Modal və Kabinet */
+/* Siyasət və Şərtlər Səhifəsi Üslubu */
+.policy-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #12213d;
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: left;
+}
+
+.policy-container h2 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.policy-container h3 {
+    color: #ffd700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.policy-container p {
+    color: #ddd;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.policy-container ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.policy-container li {
+    margin-bottom: 6px;
+}
+
+/* Modal / Daxil ol səhifəsi dizaynı */
 .modal {
     display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.85);
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    padding: 15px;
 }
 
 .modal-content {
@@ -271,27 +314,91 @@ nav a:hover, nav button:hover{
     border-radius: 15px;
     border: 2px solid #ffd700;
     width: 100%;
-    max-width: 400px;
-    text-align: center;
+    max-width: 450px;
+    text-align: left;
     position: relative;
 }
 
 .close-btn {
     position: absolute;
-    top: 10px; right: 15px;
-    font-size: 24px;
+    top: 15px; right: 20px;
+    font-size: 26px;
     color: #ffd700;
     cursor: pointer;
 }
 
-.modal-content input {
+.modal-content h2 {
+    color: #ffd700;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.modal-content p.sub-text {
+    color: #ccc;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.google-btn {
+    width: 100%;
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.divider {
+    text-align: center;
+    border-bottom: 1px solid #1c315e;
+    line-height: 0.1em;
+    margin: 20px 0;
+}
+
+.divider span {
+    background: #12213d;
+    padding: 0 10px;
+    color: #888;
+    font-size: 12px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #ffd700;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
     background: #0b1220;
     border: 1px solid #ffd700;
     color: #fff;
     border-radius: 8px;
+    font-size: 14px;
+}
+
+.input-hint {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 4px;
+    display: block;
 }
 
 .profile-container {
@@ -311,6 +418,17 @@ footer{
     text-align:center;
     color:#ddd;
     border-top: 3px solid #ffd700;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 </style>
 </head>
@@ -441,7 +559,7 @@ footer{
                 <button type="button" class="btn" id="nextBtn" onclick="changePage(1)">Növbəti səhifə ➡️</button>
             </div>
 
-            <!-- CAVAB KARTI BÖLMƏSİ (Hər səhifəyə uyğun suallar) -->
+            <!-- CAVAB KARTI BÖLMƏSİ -->
             <div class="answer-sheet">
                 <h3>📋 Cavab Kartı</h3>
                 <div class="answer-grid" id="answer-sheet-grid">
@@ -453,6 +571,147 @@ footer{
         </form>
         <br>
         <button class="btn btn-outline" onclick="showSection('home')" style="margin-top: 15px; width: 100%;">Ana səhifəyə qayıt</button>
+    </div>
+</div>
+
+<!-- İSTİFADƏ ŞƏRTLƏRİ SƏHİFƏSİ -->
+<div id="terms-section" style="display:none;">
+    <div class="policy-container">
+        <h2>İstifadə Şərtləri</h2>
+        
+        <h3>1. Ümumi Məlumat</h3>
+        <p>Bu istifadə şərtləri ("Şərtlər") https://dovletqullugu.info/ saytından ("Sayt") istifadə edən bütün şəxslər üçün keçərlidir. Sayta daxil olmaqla və ya Saytdan istifadə edərək siz bu şərtlərlə razılaşırsınız. Əgər bu şərtlərlə razı deyilsinizsə, xahiş edirik Saytdan istifadə etməyəsiniz.</p>
+
+        <h3>2. Saytın Məqsədi</h3>
+        <p>https://dovletqullugu.info/ dövlət qulluğu imtahanlarına hazırlıq məqsədi ilə təhsil materialları, sınaq imtahanları və digər resurslar təqdim edən platformadır.</p>
+
+        <h3>3. Hesab Yaratmaq və Qaydalar</h3>
+        <ul>
+            <li>Saytdan istifadə etmək üçün bəzi hallarda hesab yaratmaq tələb oluna bilər.</li>
+            <li>Hesabınızdakı məlumatların doğru və tam olmasına cavabdehsiniz.</li>
+            <li>Hesabınıza giriş məlumatlarını gizli saxlamalısınız və üçüncü şəxslərlə paylaşmamalısınız.</li>
+        </ul>
+
+        <h3>4. Məzmundan İstifadə</h3>
+        <ul>
+            <li>Saytda təqdim olunan bütün materiallar müəllif hüquqları və digər qanunlarla qorunur.</li>
+            <li>Materiallardan yalnız şəxsi təhsil məqsədilə istifadə etmək mümkündür.</li>
+            <li>Saytda olan məlumatların, sualların və digər məzmunun təkrar çapı, yayımı və kommersiya məqsədi ilə istifadəsi qanunaziddir və icazə tələb edir.</li>
+        </ul>
+
+        <h3>5. Ödənişlər və Abunəliklər</h3>
+        <ul>
+            <li>Saytda müəyyən xidmətlər ödənişli ola bilər.</li>
+            <li>Ödənişlər təhlükəsiz və şifrələnmiş formada həyata keçirilir.</li>
+            <li>Ödənişlə bağlı hər hansı problem yaranarsa, dərhal bizimlə əlaqə saxlayın.</li>
+        </ul>
+
+        <h3>6. Nəticələrin Qorunması</h3>
+        <p>Sınaq imtahanı nəticələri şəxsi hesabınızda saxlanılır və yalnız sizə məxsusdur. Digər istifadəçilərin nəticələrinə girişiniz yoxdur, istisna olaraq, profiliniz publik seçilmişdirsə, sizin ümumi nəticələriniz detalları olmadan digər istifadəçilərə göstərilə bilər.</p>
+
+        <h3>7. Məsuliyyətin Məhdudlaşdırılması</h3>
+        <ul>
+            <li>Sayt vasitəsilə təqdim olunan materiallar ehtiyatla və diqqətlə hazırlanır, lakin nəticələrin zəmanəti verilmir.</li>
+            <li>Saytın fəaliyyəti və məzmunu ilə bağlı heç bir halda maddi və ya mənəvi itkilərə görə məsuliyyət daşımırıq.</li>
+        </ul>
+
+        <h3>8. SMS Xidmətləri</h3>
+        <ul>
+            <li>İstifadəçi sayta qeydiyyat zamanı və ya sonradan mobil nömrəsini təqdim etməklə SMS vasitəsilə bildiriş almağa razılıq verir.</li>
+            <li>Göndərilən SMS-lər informativ xarakter daşıyır və reklam xarakterli ola bilər.</li>
+            <li>SMS-lər üçüncü tərəf xidmət təminatçıları vasitəsilə göndərilir.</li>
+            <li>İstifadəçi istədiyi zaman SMS xidmətindən imtina edə bilər.</li>
+        </ul>
+
+        <h3>9. Dəyişikliklər</h3>
+        <p>Bu şərtlər istənilən vaxt dəyişdirilə bilər. Dəyişikliklər sayt üzərindən elan olunacaq və istifadəçilər üçün qüvvəyə minəcək.</p>
+
+        <h3>10. Mübahisələrin Həlli</h3>
+        <p>Bu şərtlərlə bağlı yaranan hər hansı mübahisə Azərbaycan Respublikasının qanunvericiliyinə uyğun həll ediləcək.</p>
+
+        <h3>11. Əlaqə</h3>
+        <p><b>Email:</b> ys.imanoff@gmail.com</p>
+        <p><b>Telefon:</b> +994 506671557</p>
+
+        <br>
+        <button class="btn btn-outline" onclick="showSection('home')" style="width:100%;">Ana səhifəyə qayıt</button>
+    </div>
+</div>
+
+<!-- MƏXFİLİK SİYASƏTİ SƏHİFƏSİ -->
+<div id="privacy-section" style="display:none;">
+    <div class="policy-container">
+        <h2>Dövlət Qulluğu Platformunun Məxfilik Siyasəti</h2>
+        
+        <h3>MƏXFİLİK SİYASƏTİ</h3>
+        
+        <h3>1. Ümumi Məlumat</h3>
+        <p>Bu Məxfilik Siyasəti ("Siyasət") https://dovletqullugu.info/ saytından istifadə edən bütün istifadəçilərin şəxsi məlumatlarının toplanması, istifadəsi və qorunması prinsiplərini müəyyən edir. Saytdan istifadə etməklə siz bu siyasətdə göstərilən şərtlərlə razılaşırsınız. Əgər razı deyilsinizsə, sayt xidmətlərindən istifadə etməyin.</p>
+
+        <h3>2. Toplanılan Məlumatlar</h3>
+        <ul>
+            <li><b>Şəxsi məlumatlar:</b> ad, soyad, əlaqə nömrəsi, e-poçt ünvanı və hesab yaratmaq üçün tələb olunan digər məlumatlar.</li>
+            <li><b>Texniki məlumatlar:</b> istifadəçinin sayta daxil olduğu zaman avtomatik olaraq IP ünvanı, brauzer növü, cihaz tipi və bənzər texniki məlumatlar.</li>
+        </ul>
+
+        <h3>3. Məlumatların İstifadəsi</h3>
+        <ul>
+            <li>Sayt xidmətlərinin göstərilməsi və istifadəçinin hesabının idarə olunması.</li>
+            <li>İmtahan nəticələrinin və istifadəçi fəaliyyətinin saxlanması və təqdimatı.</li>
+            <li>İstifadəçi ilə əlaqə və sayt haqqında yeniliklərin bildirişi.</li>
+            <li>Xidmətlərin yaxşılaşdırılması və analiz məqsədilə məlumatların işlənməsi.</li>
+        </ul>
+
+        <h3>4. Məlumatların Paylaşılması və Açıqlanması</h3>
+        <ul>
+            <li>İstifadəçi razılığı olmadan şəxsi məlumatlar üçüncü şəxslərlə paylaşılmır, qanunvericiliklə tələb olunmadıqda.</li>
+            <li>İstifadəçi öz profilini publik seçdiyi halda, onun ümumi nəticələri detallarsız şəkildə digər istifadəçilərə göstərilə bilər.</li>
+        </ul>
+
+        <h3>5. Məlumatların Qorunması</h3>
+        <ul>
+            <li>Fərdi məlumatların təhlükəsizliyi üçün müasir texnoloji və təşkilati tədbirlər görülür.</li>
+            <li>Məlumatların icazəsiz çıxarılması, dəyişdirilməsi və itirilməsinin qarşısının alınması təmin edilir.</li>
+            <li>Məlumatlar təhlükəsiz və şifrələnmiş kanallar vasitəsilə ötürülür.</li>
+        </ul>
+
+        <h3>6. Məlumatların Saxlanması</h3>
+        <p>Şəxsi məlumatlar qanunvericilikdə nəzərdə tutulmuş müddətdə və toplanma məqsədləri üçün lazım olan qədər saxlanılır.</p>
+
+        <h3>7. İstifadəçinin Hüquqları</h3>
+        <ul>
+            <li>İstifadəçi öz şəxsi məlumatlarına giriş hüququna malikdir.</li>
+            <li>İstifadəçi məlumatların düzəlişi, məhdudlaşdırılması və silinməsi üçün müraciət edə bilər.</li>
+        </ul>
+
+        <h3>8. Cookies və Analitik Məlumatlar</h3>
+        <ul>
+            <li>Sayt xidmətlərinin düzgün işləməsi və istifadəçi təcrübəsinin təkmilləşdirilməsi məqsədilə cookie-lərdən istifadə olunur.</li>
+            <li>İstifadəçi cookie-ləri qəbul etməməyi seçə bilər, lakin bəzi xidmətlər məhdudlaşa bilər.</li>
+        </ul>
+
+        <h3>9. SMS Bildirişləri</h3>
+        <ul>
+            <li>Saytımız istifadəçilərə müxtəlif bildirişlər göndərmək üçün mobil nömrələrə SMS göndərə bilər.</li>
+            <li>SMS-lər üçüncü tərəf xidmət təminatçıları vasitəsilə göndərilir ki, bu da onların çatdırılmasını və idarəsini təmin edir.</li>
+            <li>Bu xidmət təminatçıları istifadəçi məlumatlarının məxfiliyinə hörmət edir və yalnız SMS göndərilməsi məqsədilə istifadə olunur.</li>
+            <li>SMS göndərilməsinə razılıq istifadəçi hesabı yaradarkən və ya bu xidməti istifadə edərkən verilir.</li>
+            <li>İstifadəçi istədiyi zaman SMS bildirişləri qəbul etməməyi seçə və ya bunun üçün bizimlə əlaqə saxlaya bilər.</li>
+            <li>SMS-lər əsasən xidmətlər, yeniliklər və digər vacib məlumatlar barədə ola bilər.</li>
+        </ul>
+
+        <h3>10. Dəyişikliklər</h3>
+        <p>Bu siyasət istənilən vaxt dəyişdirilə bilər, dəyişikliklər sayt vasitəsilə elan olunacaq.</p>
+
+        <h3>11. Mübahisələrin Həlli</h3>
+        <p>Bu şərtlərlə bağlı yaranan hər hansı mübahisə Azərbaycan Respublikasının qanunvericiliyinə uyğun həll ediləcək.</p>
+
+        <h3>12. Əlaqə</h3>
+        <p><b>Email:</b> ys.imanoff@gmail.com</p>
+        <p><b>Telefon:</b> +994 506671557</p>
+
+        <br>
+        <button class="btn btn-outline" onclick="showSection('home')" style="width:100%;">Ana səhifəyə qayıt</button>
     </div>
 </div>
 
@@ -474,18 +733,45 @@ footer{
 <div id="authModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modal-title" style="color:#ffd700; margin-bottom:15px;">Qeydiyyat</h2>
+        <h2 id="modal-title">Daxil ol</h2>
+        <p class="sub-text" id="modal-subtitle">Hesabınıza daxil olmaq üçün istifadəçi adınızı və şifrənizi daxil edin</p>
+        
+        <button type="button" class="google-btn" onclick="alert('Google ilə giriş tezliklə aktivləşəcək!')">
+            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+            Google ilə daxil ol
+        </button>
+
+        <div class="divider"><span>VƏ YA</span></div>
+
         <form id="authForm" onsubmit="handleAuth(event)">
-            <input type="text" id="nameInput" placeholder="Ad və Soyad" required>
-            <input type="text" id="contactInput" placeholder="Mobil nömrə və ya Gmail" required>
-            <input type="password" id="passInput" placeholder="Şifrə" required>
-            <button type="submit" class="btn" style="width:100%; margin-top:10px;" id="modalSubmitBtn">Qeydiyyatdan keç</button>
+            <div class="input-group" id="nameGroup">
+                <label>Ad və Soyad</label>
+                <input type="text" id="nameInput" placeholder="Adınızı daxil edin">
+            </div>
+
+            <div class="input-group">
+                <label id="contactLabel">İstifadəçi adı və ya Email</label>
+                <input type="text" id="contactInput" placeholder="İstifadəçi adınızı və ya emailinizi daxil edin" required>
+                <span class="input-hint">Qeydiyyat zamanı istifadə etdiyiniz istifadəçi adını və ya email ünvanını daxil edin.</span>
+            </div>
+
+            <div class="input-group">
+                <label>Şifrə</label>
+                <input type="password" id="passInput" placeholder="Şifrənizi daxil edin" required>
+                <span class="input-hint">Şifrə böyük-kiçik hərf həssasdır.</span>
+            </div>
+
+            <button type="submit" class="btn" style="width:100%; margin-top:10px; background:#22c55e; color:#fff;" id="modalSubmitBtn">Daxil ol</button>
         </form>
     </div>
 </div>
 
 <footer>
-    © 2026 DQ Platform – Developed by Yunis İmanov
+    <p>© 2026 DQ Platform – Developed by Yunis İmanov</p>
+    <div style="margin-top: 10px;">
+        <a href="#" onclick="showSection('terms')">İstifadə Şərtləri</a> | 
+        <a href="#" onclick="showSection('privacy')">Məxfilik Siyasəti</a>
+    </div>
 </footer>
 
 <script>
@@ -498,14 +784,13 @@ footer{
         26: 'e', 27: 'b', 28: 'e', 29: 'd', 30: 'c'
     };
 
-    // Yüklədiyiniz dəqiq fayl adları
     const bookPages = [
-        { title: "Səhifə 1 (Suallar: 1 - 5)", img: "1-5.jpg", start: 1, end: 5 },
-        { title: "Səhifə 2 (Suallar: 6 - 11)", img: "6-11.jpg", start: 6, end: 11 },
-        { title: "Səhifə 3 (Suallar: 12 - 17)", img: "12-17.jpg", start: 12, end: 17 },
-        { title: "Səhifə 4 (Suallar: 17 - 23)", img: "17-23.jpg", start: 18, end: 23 },
-        { title: "Səhifə 5 (Suallar: 24 - 28)", img: "24-28.jpg", start: 24, end: 28 },
-        { title: "Səhifə 6 (Suallar: 29 - 30)", img: "29-30.jpg", start: 29, end: 30 }
+        { title: "Səhifə 1 (Suallar: 1 - 5)", img: "1-5.jpg" },
+        { title: "Səhifə 2 (Suallar: 6 - 11)", img: "6-11.jpg" },
+        { title: "Səhifə 3 (Suallar: 12 - 17)", img: "12-17.jpg" },
+        { title: "Səhifə 4 (Suallar: 18 - 23)", img: "17-23.jpg" },
+        { title: "Səhifə 5 (Suallar: 24 - 28)", img: "24-28.jpg" },
+        { title: "Səhifə 6 (Suallar: 29 - 30)", img: "29-30.jpg" }
     ];
 
     let currentPageIndex = 0;
@@ -517,7 +802,6 @@ footer{
         let pagesHtml = '';
         let sheetHtml = '';
 
-        // 1. Kitab səhifələrini yaradırıq
         bookPages.forEach((page, index) => {
             pagesHtml += `
                 <div class="book-page ${index === 0 ? 'active' : ''}" id="page-${index}">
@@ -527,7 +811,6 @@ footer{
             `;
         });
 
-        // 2. 1-dən 30-a qədər Cavab Kartı yaradırıq
         for(let i = 1; i <= 30; i++) {
             sheetHtml += `
                 <div class="answer-row">
@@ -553,7 +836,6 @@ footer{
         if (currentPageIndex < 0) currentPageIndex = 0;
         if (currentPageIndex >= bookPages.length) currentPageIndex = bookPages.length - 1;
 
-        // Bütün səhifələri gizlət, aktiv olanı göstər
         for (let i = 0; i < bookPages.length; i++) {
             document.getElementById(`page-${i}`).classList.remove('active');
         }
@@ -599,13 +881,18 @@ footer{
     function openModal(mode) {
         isLoginMode = (mode === 'login');
         document.getElementById('authModal').style.display = 'flex';
-        document.getElementById('modal-title').innerText = isLoginMode ? 'Daxil ol' : 'Qeydiyyatdan keç';
-        document.getElementById('modalSubmitBtn').innerText = isLoginMode ? 'Daxil ol' : 'Qeydiyyatı tamamla';
+        
         if(isLoginMode) {
-            document.getElementById('nameInput').style.display = 'none';
+            document.getElementById('modal-title').innerText = 'Daxil ol';
+            document.getElementById('modal-subtitle').innerText = 'Hesabınıza daxil olmaq üçün istifadəçi adınızı və şifrənizi daxil edin';
+            document.getElementById('modalSubmitBtn').innerText = 'Daxil ol';
+            document.getElementById('nameGroup').style.display = 'none';
             document.getElementById('nameInput').required = false;
         } else {
-            document.getElementById('nameInput').style.display = 'block';
+            document.getElementById('modal-title').innerText = 'Qeydiyyat';
+            document.getElementById('modal-subtitle').innerText = 'Yeni hesab yaratmaq üçün məlumatları doldurun';
+            document.getElementById('modalSubmitBtn').innerText = 'Qeydiyyatdan keç';
+            document.getElementById('nameGroup').style.display = 'block';
             document.getElementById('nameInput').required = true;
         }
     }
@@ -626,7 +913,7 @@ footer{
         localStorage.setItem('dq_user', JSON.stringify(existingUser));
         checkUserSession();
         closeModal();
-        alert("Uğurla daxil oldunuz!");
+        alert(isLoginMode ? "Uğurla daxil oldunuz!" : "Qeydiyyat uğurla tamamlandı!");
     }
 
     function checkUserSession() {
@@ -668,6 +955,8 @@ footer{
         document.getElementById('tests-section').style.display = 'none';
         document.getElementById('mentiq-test-section').style.display = 'none';
         document.getElementById('profile-section').style.display = 'none';
+        document.getElementById('privacy-section').style.display = 'none';
+        document.getElementById('terms-section').style.display = 'none';
 
         if(sectionName === 'home') {
             document.getElementById('home-section').style.display = 'block';
@@ -675,6 +964,10 @@ footer{
             document.getElementById('sinaqlar-section').style.display = 'block';
         } else if(sectionName === 'tests') {
             document.getElementById('tests-section').style.display = 'block';
+        } else if(sectionName === 'privacy') {
+            document.getElementById('privacy-section').style.display = 'block';
+        } else if(sectionName === 'terms') {
+            document.getElementById('terms-section').style.display = 'block';
         } else if(sectionName === 'profile') {
             const user = JSON.parse(localStorage.getItem('dq_user'));
             if(!user) {
@@ -684,6 +977,7 @@ footer{
             }
             document.getElementById('profile-section').style.display = 'block';
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function openSubject(subjectName) {
@@ -700,6 +994,7 @@ footer{
         
         document.getElementById('test-title-heading').innerText = subjectName + " üzrə testlər";
         document.getElementById('mentiq-test-section').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function openSinaq(sinaqName) {
@@ -715,6 +1010,7 @@ footer{
         document.getElementById('tests-section').style.display = 'none';
         document.getElementById('test-title-heading').innerText = sinaqName + " - Məntiq (30 Sual)";
         document.getElementById('mentiq-test-section').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     window.onload = function() {
@@ -725,6 +1021,4 @@ footer{
 
 </body>
 </html>
-
-```
 
