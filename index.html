@@ -13,14 +13,14 @@
 
 body{
     font-family:Arial,sans-serif;
-    background:#f8f9fa;
+    background:#f4f6f9;
     color:#333;
     line-height:1.6;
 }
 
-/* Ən Üst Əlaqə və Sosial Panel */
+/* Ən Üst Əlaqə Paneli */
 .top-bar {
-    background: #00c853;
+    background: #20df7b;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -48,14 +48,14 @@ body{
 
 .top-socials {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 .top-socials a {
     width: 32px;
     height: 32px;
     background: #fff;
-    color: #00c853;
+    color: #20df7b;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -71,34 +71,33 @@ body{
     color: #fff;
 }
 
-/* Header və Naviqasiya */
+/* Header və Loqo */
 header{
     background:#fff;
-    padding: 15px 20px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-.logo-area h1 {
-    color: #0f172a;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.auth-buttons-header {
+.logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-.btn-login {
-    background: #00c853;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-header-login {
+    background: #20df7b;
     color: #fff;
-    padding: 10px 22px;
-    border-radius: 30px;
+    padding: 10px 24px;
+    border-radius: 25px;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -106,15 +105,15 @@ header{
     transition: 0.3s;
 }
 
-.btn-login:hover {
-    background: #00b046;
+.btn-header-login:hover {
+    background: #17c96d;
 }
 
-.btn-register {
+.btn-header-register {
     background: transparent;
-    color: #0f172a;
-    padding: 10px 22px;
-    border-radius: 30px;
+    color: #475569;
+    padding: 10px 24px;
+    border-radius: 25px;
     font-weight: bold;
     border: 1px solid #e2e8f0;
     cursor: pointer;
@@ -122,416 +121,237 @@ header{
     transition: 0.3s;
 }
 
-.btn-register:hover {
-    border-color: #00c853;
-    color: #00c853;
+.btn-header-register:hover {
+    border-color: #20df7b;
+    color: #20df7b;
 }
 
-/* Nav Menu Bar */
-nav{
-    background:#0f172a;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:25px;
-    padding:12px;
-}
-
-nav a, nav button{
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-}
-
-nav a:hover, nav button:hover{
-    color:#00c853;
-}
-
-/* Hero Bölmələri */
-.hero-box {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    text-align: center;
-    border: 1px solid #eaeaea;
-}
-
-.hero-box h2 {
-    font-size: 32px;
-    color: #0f172a;
-    margin-bottom: 15px;
-}
-
-.hero-box p {
-    color: #64748b;
-    font-size: 16px;
-    margin-bottom: 25px;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Düymələr */
-.btn-main-green {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #00c853;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 35px;
-    transition:.3s;
-    margin: 6px;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    box-shadow: 0 4px 12px rgba(0,200,83,0.2);
-}
-
-.btn-main-green:hover {
-    background: #00b046;
-    transform: translateY(-2px);
-}
-
-.btn-main-dark {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #0f172a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 35px;
-    transition:.3s;
-    margin: 6px;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    box-shadow: 0 4px 12px rgba(15,23,42,0.2);
-}
-
-.btn-main-dark:hover {
-    background: #1e293b;
-    transform: translateY(-2px);
-}
-
-/* Xidmət Kartları */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    padding:20px 0;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.card{
-    background:#fff;
-    border:1px solid #e2e8f0;
-    border-radius:15px;
-    padding:25px 20px;
-    text-align:center;
-    transition:.3s;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color: #00c853;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-}
-
-.card p.card-title{
-    color:#0f172a;
-    font-size:18px;
-    font-weight:bold;
-}
-
-/* Test Konteyneri və Səhifələr */
-.test-container {
-    max-width: 900px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.book-page {
-    display: none;
-    text-align: center;
-}
-
-.book-page.active {
-    display: block;
-}
-
-.question-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
-    background: #fff;
-    padding: 5px;
-    margin-top: 10px;
-}
-
-.book-nav {
+/* Əsas qeydiyyat səhifəsi konteyneri */
+.main-wrapper {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    min-height: calc(100vh - 120px);
+    padding: 40px 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-}
-
-/* Cavab Kartı */
-.answer-sheet {
-    background: #f8f9fa;
-    border: 1px solid #e2e8f0;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 30px;
-}
-
-.answer-sheet h3 {
-    color: #0f172a;
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.answer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 10px;
-}
-
-.answer-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-.answer-row span {
-    font-weight: bold;
-    color: #0f172a;
-    font-size: 14px;
-}
-
-.options-group {
-    display: flex;
-    gap: 6px;
-}
-
-.options-group label {
-    cursor: pointer;
-    font-weight: bold;
-    color: #64748b;
-    background: #f1f5f9;
-    padding: 4px 8px;
-    border-radius: 5px;
-    transition: 0.2s;
-    font-size: 13px;
-}
-
-.options-group input {
-    display: none;
-}
-
-.options-group input:checked + span, .options-group label:has(input:checked) {
-    background: #00c853;
-    color: #fff;
-}
-
-/* Siyasət və Şərtlər */
-.policy-container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 20px;
-    padding: 40px;
-    text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.policy-container h2 {
-    color: #0f172a;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 26px;
-}
-
-.policy-container h3 {
-    color: #0f172a;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.policy-container p {
-    color: #64748b;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    padding: 15px;
 }
 
-.modal-content {
+.register-card {
     background: #fff;
-    padding: 35px 30px;
-    border-radius: 20px;
-    border: 1px solid #eaeaea;
     width: 100%;
-    max-width: 420px;
-    text-align: left;
-    position: relative;
+    max-width: 550px;
+    padding: 40px 30px;
+    border-radius: 24px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.close-btn {
-    position: absolute;
-    top: 15px; right: 20px;
-    font-size: 24px;
-    color: #64748b;
-    cursor: pointer;
-}
-
-.modal-content h2 {
+.register-card h2 {
+    text-align: center;
     color: #0f172a;
+    font-size: 28px;
     margin-bottom: 8px;
-    text-align: center;
-    font-size: 24px;
 }
 
-.modal-content p.sub-text {
-    color: #64748b;
-    font-size: 13px;
+.register-card p.subtitle {
     text-align: center;
-    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
 }
 
 .google-btn {
     width: 100%;
-    background: #f8f9fa;
-    color: #333;
-    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #334155;
+    border: 1px solid #cbd5e1;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    font-size: 14px;
+    gap: 12px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
 .google-btn:hover {
-    background: #f1f5f9;
+    background: #f8fafc;
+    border-color: #94a3b8;
 }
 
 .divider {
     text-align: center;
     border-bottom: 1px solid #e2e8f0;
     line-height: 0.1em;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .divider span {
     background: #fff;
-    padding: 0 10px;
+    padding: 0 15px;
     color: #94a3b8;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .input-group label {
     display: block;
-    color: #0f172a;
-    font-size: 13px;
+    color: #1e293b;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 6px;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    background: #f8f9fa;
-    border: 1px solid #e2e8f0;
-    color: #333;
-    border-radius: 10px;
-    font-size: 14px;
+.input-group label span {
+    color: #ef4444;
 }
 
-.modal-content input:focus {
-    border-color: #00c853;
+.input-wrapper {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #20df7b;
     outline: none;
     background: #fff;
 }
 
-.profile-container {
-    max-width: 600px;
-    margin: 40px auto;
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 20px;
-    padding: 35px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.input-hint {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 5px;
+    font-style: italic;
 }
 
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+.terms-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #20df7b;
+}
+
+.terms-box label {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.terms-box a {
+    color: #20df7b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms-box a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #20df7b;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(32, 223, 123, 0.2);
+}
+
+.btn-submit:hover {
+    background: #17c96d;
+}
+
+.bottom-login-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.bottom-login-text a {
+    color: #20df7b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bottom-login-text a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer{
-    margin-top:50px;
     background:#0f172a;
-    padding:25px;
+    padding: 25px;
     text-align:center;
     color:#fff;
-    border-top: 4px solid #00c853;
+    border-top: 4px solid #20df7b;
 }
 
-footer a {
-    color: #00c853;
+footer p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #20df7b;
     text-decoration: none;
     margin: 0 10px;
     font-size: 14px;
 }
 
-footer a:hover {
+.footer-links a:hover {
     text-decoration: underline;
+}
+
+.content-section {
+    display: none;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
 }
 </style>
 </head>
@@ -540,488 +360,269 @@ footer a:hover {
 <!-- ƏN ÜST ƏLAQƏ PANELİ -->
 <div class="top-bar">
     <div class="top-contact">
-        <a href="tel:+994506671557">📞 +994 50 667 15 57</a>
-        <a href="mailto:Ys.imanoff@gmail.com">✉️ Ys.imanoff@gmail.com</a>
+        <a href="tel:+994708838100">📞 +994 70 883 81 00</a>
+        <a href="mailto:info@dovletqullugu.info">✉️ info@dovletqullugu.info</a>
     </div>
     <div class="top-socials">
         <a href="https://www.facebook.com" target="_blank">f</a>
-        <a href="https://www.instagram.com/ys.imanoff" target="_blank">📷</a>
-        <a href="https://wa.me/qr/2OLYZXD45JFZO1" target="_blank">💬</a>
+        <a href="https://www.instagram.com" target="_blank">📷</a>
+        <a href="https://www.youtube.com" target="_blank">▶</a>
+        <a href="https://wa.me/..." target="_blank">💬</a>
     </div>
 </div>
 
 <!-- HEADER VƏ LOGO -->
 <header>
-    <div class="logo-area" style="padding-left: 10px;">
-        <h1>DQ Platform</h1>
+    <div class="logo-area">
+        <h1 style="font-size: 22px; color: #0f172a; font-weight: bold;">DQ DOVLETQULLUGU.INFO</h1>
     </div>
-    <div class="auth-buttons-header" id="auth-nav-buttons" style="padding-right: 10px;">
-        <button class="btn-login" onclick="openModal('login')">Daxil ol</button>
-        <button class="btn-register" onclick="openModal('register')">Qeydiyyatdan keç</button>
+    <div class="header-actions" id="auth-nav-buttons">
+        <button class="btn-header-login" onclick="openAuth('login')">Daxil ol</button>
+        <button class="btn-header-register" onclick="openAuth('register')">Qeydiyyatdan keç</button>
     </div>
-    <div class="auth-buttons-header" id="user-nav-buttons" style="display:none; padding-right: 10px;">
-        <button class="btn-login" onclick="showSection('profile')">👤 Kabinet</button>
-        <button class="btn-register" onclick="logout()" style="border-color: #ef4444; color: #ef4444;">Çıxış</button>
+    <div class="header-actions" id="user-nav-buttons" style="display:none;">
+        <button class="btn-header-login" onclick="showSection('profile-section')">👤 Kabinet</button>
+        <button class="btn-header-register" onclick="logout()" style="border-color: #ef4444; color: #ef4444;">Çıxış</button>
     </div>
 </header>
 
-<!-- NAVİQASİYA MENUSU -->
-<nav>
-    <a onclick="showSection('home')">Ana səhifə</a>
-    <a onclick="checkAndShow('sinaqlar')">Sınaqlar</a>
-    <a onclick="checkAndShow('tests')">Testlər</a>
-    <a onclick="showSection('yenilikler')">Yeniliklər</a>
-</nav>
-
-<!-- ƏSAS SƏHİFƏ -->
-<div id="home-section">
-    <div class="hero-box">
-        <h2>Dövlət Qulluğu üçün Sınaq İmtahanları!</h2>
-        <p>Real imtahan təcrübəsi əsasında hazırlanmış sınaq imtahanları, fənn testləri və PDF materiallar.</p>
-
-        <div>
-            <button class="btn-main-green" onclick="checkAndShow('sinaqlar')">🎓 Sınaqlara Bax</button>
-            <button class="btn-main-dark" onclick="openModal('register')">👤 Qeydiyyatdan Keç və İndi Başla</button>
-        </div>
+<!-- QEYDİYYAT SƏHİFƏSİ -->
+<div class="main-wrapper" id="register-section">
+    <div class="register-card">
+        <h2>Qeydiyyat</h2>
+        <p class="subtitle">Qeydiyyatdan keçin və öyrənmənizə başlayın</p>
         
-        <div style="margin-top: 25px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
-            <a href="https://t.me/dovlettqullugu" target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px;">📢 Telegram Kanal</a>
-            <a href="https://t.me/+dovletqullugu_qrup" target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px;">👥 Telegram Qrup</a>
-            <a href="https://whatsapp.com/channel/..." target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px; background: #00c853;">📢 WhatsApp Kanal</a>
-            <a href="https://chat.whatsapp.com/GIb2EwwiXXg3PpEJWZVKss" target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px; background: #00c853;">💬 WhatsApp Qrup</a>
-        </div>
-    </div>
+        <button type="button" class="google-btn" onclick="loginWithGoogle()">
+            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+            Google ilə qeydiyyat
+        </button>
 
-    <section>
-        <h2 style="text-align:center; color:#0f172a; font-size:28px; margin-bottom: 10px;">Bizim Xidmətlərimiz</h2>
-        <div class="cards">
-            <div class="card" onclick="checkAndShow('sinaqlar')">
-                <p class="card-title">SINAQLAR</p>
-                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Ümumi imtahan sınaqları</p>
-            </div>
-            <div class="card" onclick="checkAndShow('tests')">
-                <p class="card-title">TESTLƏR</p>
-                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Fənlər üzrə testlər</p>
-            </div>
-            <div class="card" onclick="showSection('yenilikler')">
-                <p class="card-title">YENİLİKLƏR</p>
-                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Elanlar və xəbərlər</p>
-            </div>
-            <div class="card" onclick="showSection('home')">
-                <p class="card-title">PDF MATERİAL</p>
-                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Dərs vəsaitləri</p>
-            </div>
-        </div>
-    </section>
-</div>
+        <div class="divider"><span>və ya</span></div>
 
-<!-- YENİLİKLƏR SƏHİFƏSİ (ŞƏKİLLİ) -->
-<div id="yenilikler-section" style="display:none;">
-    <div class="hero-box" style="max-width: 750px;">
-        <h2 style="color:#0f172a;">Elanlar və Yeniliklər</h2>
-        <p>Platformadakı son elanlar və yenilənmiş posterlər:</p>
-        
-        <div style="margin: 20px 0;">
-            <img src="əli poster.jpg" alt="Yenilik Elanı" style="max-width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        </div>
-
-        <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
-    </div>
-</div>
-
-<!-- ÜMUMİ SINAQLAR SƏHİFƏSİ -->
-<div id="sinaqlar-section" style="display:none;">
-    <div class="hero-box" style="max-width: 700px;">
-        <h2 style="color:#0f172a;">Ümumi Sınaqlar</h2>
-        <p>İştirak etmək istədiyiniz sınaq seçimini edin:</p>
-        
-        <div class="cards" style="max-width: 500px; margin-bottom: 20px;">
-            <div class="card" onclick="alert('Ümumi Sınaq 1 tezliklə əlavə olunacaq!')">
-                <p class="card-title">Ümumi Sınaq 1</p>
-                <p style="font-size: 12px; color: #64748b; margin-top: 4px;">Blok imtahanı</p>
-            </div>
-            <div class="card" onclick="alert('Ümumi Sınaq 2 tezliklə əlavə olunacaq!')">
-                <p class="card-title">Ümumi Sınaq 2</p>
-                <p style="font-size: 12px; color: #64748b; margin-top: 4px;">Sınaq 2</p>
-            </div>
-        </div>
-        <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
-    </div>
-</div>
-
-<!-- FƏNN TESTLƏRİ SƏHİFƏSİ -->
-<div id="tests-section" style="display:none;">
-    <div class="hero-box" style="max-width: 750px;">
-        <h2 style="color:#0f172a;">Fənn Testləri</h2>
-        <p>İmtahana hazırlaşmaq istədiyiniz fənni seçin:</p>
-        
-        <div class="cards" style="max-width: 650px; margin-bottom: 20px;">
-            <div class="card" onclick="openSubject('Azərbaycan dili')">
-                <p class="card-title">Azərbaycan dili</p>
-            </div>
-            <div class="card" onclick="openSubject('Qanunvericilik')">
-                <p class="card-title">Qanunvericilik</p>
-            </div>
-            <div class="card" onclick="openSubject('İnformatika')">
-                <p class="card-title">İnformatika</p>
-            </div>
-            <div class="card" onclick="openSubject('Məntiq')">
-                <p class="card-title">Məntiq</p>
-            </div>
-        </div>
-        <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
-    </div>
-</div>
-
-<!-- KİTABÇA / MƏNTİQ TESTİ SƏHİFƏSİ -->
-<div id="mentiq-test-section" style="display:none;">
-    <div class="test-container">
-        <h2 id="test-title-heading" style="color:#0f172a; text-align:center; margin-bottom:15px;">Məntiq Testləri</h2>
-        
-        <form id="logicQuizForm" onsubmit="submitQuiz(event)">
-            <div id="book-pages-container"></div>
-
-            <div class="book-nav">
-                <button type="button" class="btn-main-dark" id="prevBtn" onclick="changePage(-1)">⬅️ Əvvəlki</button>
-                <span id="pageIndicator" style="color: #0f172a; font-weight: bold;">Səhifə 1 / 6</span>
-                <button type="button" class="btn-main-green" id="nextBtn" onclick="changePage(1)">Növbəti ➡️</button>
+        <form id="registerForm" onsubmit="handleRegister(event)">
+            <div class="input-group">
+                <label>Ad Soyad<span>*</span></label>
+                <input type="text" id="regName" placeholder="Ad və soyadınızı daxil edin" required>
+                <div class="input-hint">Tam ad və soyad daxil edin. Bu məlumat imtahan nəticələrində görünəcək.</div>
             </div>
 
-            <div class="answer-sheet">
-                <h3>📋 Cavab Kartı</h3>
-                <div class="answer-grid" id="answer-sheet-grid"></div>
+            <div class="input-group">
+                <label>Telefon Nömrəsi</label>
+                <input type="text" id="regPhone" placeholder="Telefon nömrənizi daxil edin (0501234567)">
             </div>
 
-            <button type="submit" class="btn-main-green" style="width:100%; margin-top:25px; padding: 15px; font-size: 16px;">Nəticəni Yoxla və Göndər</button>
+            <div class="input-group">
+                <label>Email<span>*</span></label>
+                <input type="email" id="regEmail" placeholder="Emailinizi daxil edin" required>
+                <div class="input-hint">Hesabınızı təsdiqləmək üçün bu emailə KOD göndəriləcək.</div>
+            </div>
+
+            <div class="input-group">
+                <label>Şifrə<span>*</span></label>
+                <div class="input-wrapper">
+                    <input type="password" id="regPass" placeholder="Şifrənizi daxil edin" required>
+                    <span class="eye-icon" onclick="togglePassword('regPass', this)">👁️</span>
+                </div>
+                <div class="input-hint">Şifrə ən azı 8 simvol uzunluğunda və ən azı bir hərf, rəqəm təşkil etməlidir.</div>
+            </div>
+
+            <div class="input-group">
+                <label>Şifrəni Təkrarla<span>*</span></label>
+                <div class="input-wrapper">
+                    <input type="password" id="regPassConfirm" placeholder="Şifrənizi təkrar daxil edin" required>
+                    <span class="eye-icon" onclick="togglePassword('regPassConfirm', this)">👁️</span>
+                </div>
+                <div class="input-hint">Hər iki şifrə eyni olmalıdır.</div>
+            </div>
+
+            <div class="terms-box">
+                <input type="checkbox" id="termsCheck" required style="margin-top: 3px;">
+                <label for="termsCheck">Qeydiyyatdan keçməklə siz <a href="#" onclick="showSection('terms-section')">Şərtlər</a> və <a href="#" onclick="showSection('privacy-section')">Məxfilik Siyasəti</a>ni qəbul etmiş olursunuz.</label>
+            </div>
+
+            <button type="submit" class="btn-submit">Qeydiyyat</button>
         </form>
-        <br>
-        <button class="btn-main-dark" onclick="showSection('tests')" style="width: 100%; margin-top: 10px;">Testlərə qayıt</button>
+
+        <div class="bottom-login-text">
+            Hesabınız var? <a href="#" onclick="showSection('login-section')">Daxil ol</a>
+        </div>
     </div>
 </div>
 
-<div id="other-test-section" style="display:none;">
-    <div class="hero-box" style="max-width: 600px;">
-        <h2 id="other-test-title" style="color:#0f172a;">Fənn</h2>
-        <p style="color: #64748b;">Bu fənn üzrə testlər tezliklə əlavə olunacaq.</p>
-        <br>
-        <button class="btn-main-dark" onclick="showSection('tests')">Testlərə qayıt</button>
-    </div>
-</div>
-
-<div id="terms-section" style="display:none;">
-    <div class="policy-container">
-        <h2>İstifadə Şərtləri</h2>
-        <h3>1. Ümumi Məlumat</h3>
-        <p>Bu istifadə şərtləri platformadan istifadə edən şəxslər üçün keçərlidir.</p>
-        <br>
-        <button class="btn-main-dark" onclick="showSection('home')" style="width:100%;">Ana səhifəyə qayıt</button>
-    </div>
-</div>
-
-<div id="privacy-section" style="display:none;">
-    <div class="policy-container">
-        <h2>Məxfilik Siyasəti</h2>
-        <h3>1. Ümumi Məlumat</h3>
-        <p>İstifadəçilərin şəxsi məlumatlarının qorunması prinsiplərini müəyyən edir.</p>
-        <br>
-        <button class="btn-main-dark" onclick="showSection('home')" style="width:100%;">Ana səhifəyə qayıt</button>
-    </div>
-</div>
-
-<div id="profile-section" style="display:none;">
-    <div class="profile-container">
-        <h2 style="color:#0f172a; margin-bottom:15px;">Şəxsi Kabinet</h2>
-        <p><b>Ad/İstifadəçi:</b> <span id="profile-name"></span></p>
-        <p><b>Əlaqə:</b> <span id="profile-contact"></span></p>
-        <hr style="border-color: #eaeaea; margin: 20px 0;">
-        <h3 style="color:#0f172a; margin-bottom:10px;">Sınaq Nəticələrim</h3>
-        <p id="profile-result" style="color:#64748b;">Hələ ki heç bir sınaqda iştirak etməmisiniz.</p>
-        <br>
-        <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
-    </div>
-</div>
-
-<!-- QEYDİYYAT / DAXİL OL MODALI -->
-<div id="authModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modal-title">Daxil ol</h2>
-        <p class="sub-text" id="modal-subtitle">Hesabınıza daxil olmaq üçün məlumatları daxil edin</p>
+<!-- DAXİL OL SƏHİFƏSİ -->
+<div class="main-wrapper content-section" id="login-section">
+    <div class="register-card" style="margin: 0 auto;">
+        <h2>Daxil ol</h2>
+        <p class="subtitle">Hesabınıza daxil olmaq üçün məlumatları daxil edin</p>
         
-        <button type="button" class="google-btn" onclick="alert('Google ilə giriş tezliklə aktivləşəcək!')">
+        <button type="button" class="google-btn" onclick="loginWithGoogle()">
             <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
             Google ilə daxil ol
         </button>
 
         <div class="divider"><span>və ya</span></div>
 
-        <form id="authForm" onsubmit="handleAuth(event)">
-            <div class="input-group" id="nameGroup">
-                <label>Ad və Soyad</label>
-                <input type="text" id="nameInput" placeholder="Adınızı daxil edin">
-            </div>
-
+        <form id="loginForm" onsubmit="handleLogin(event)">
             <div class="input-group">
-                <label>İstifadəçi adı və ya Email</label>
-                <input type="text" id="contactInput" placeholder="İstifadəçi adı və ya email" required>
+                <label>Email və ya İstifadəçi adı</label>
+                <input type="text" id="loginEmail" placeholder="Emailinizi daxil edin" required>
             </div>
 
             <div class="input-group">
                 <label>Şifrə</label>
-                <input type="password" id="passInput" placeholder="Şifrənizi daxil edin" required>
+                <div class="input-wrapper">
+                    <input type="password" id="loginPass" placeholder="Şifrənizi daxil edin" required>
+                    <span class="eye-icon" onclick="togglePassword('loginPass', this)">👁️</span>
+                </div>
             </div>
 
-            <button type="submit" class="btn-main-green" style="width:100%; margin-top:10px;" id="modalSubmitBtn">Daxil ol</button>
+            <button type="submit" class="btn-submit">Daxil ol</button>
         </form>
+
+        <div class="bottom-login-text">
+            Hesabınız yoxdur? <a href="#" onclick="showSection('register-section')">Qeydiyyatdan keç</a>
+        </div>
+    </div>
+</div>
+
+<!-- ŞƏXSİ KABİNET -->
+<div class="main-wrapper content-section" id="profile-section">
+    <div class="register-card" style="margin: 0 auto; text-align: left;">
+        <h2 style="text-align: center;">Şəxsi Kabinet</h2>
+        <br>
+        <p><b>Ad və Soyad:</b> <span id="profile-name"></span></p>
+        <p><b>Email:</b> <span id="profile-email"></span></p>
+        <p><b>Telefon:</b> <span id="profile-phone"></span></p>
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #e2e8f0;">
+        <h3 style="color: #0f172a; margin-bottom: 10px;">İmtahan Nəticələrim</h3>
+        <p id="profile-result" style="color: #64748b;">Hələ ki heç bir sınaqda iştirak etməmisiniz.</p>
+        <br>
+        <button class="btn-submit" onclick="showSection('register-section')">Ana səhifəyə qayıt</button>
+    </div>
+</div>
+
+<!-- ŞƏRTLƏR VƏ MƏXFİLİK -->
+<div class="main-wrapper content-section" id="terms-section">
+    <div class="register-card" style="margin: 0 auto; text-align: left;">
+        <h2>İstifadə Şərtləri</h2>
+        <p style="color: #64748b; margin-top: 15px;">Platformadan istifadə qaydaları və şərtləri burada əks olunur.</p>
+        <br>
+        <button class="btn-submit" onclick="showSection('register-section')">Geri qayıt</button>
+    </div>
+</div>
+
+<div class="main-wrapper content-section" id="privacy-section">
+    <div class="register-card" style="margin: 0 auto; text-align: left;">
+        <h2>Məxfilik Siyasəti</h2>
+        <p style="color: #64748b; margin-top: 15px;">İstifadəçi məlumatlarının qorunması siyasəti.</p>
+        <br>
+        <button class="btn-submit" onclick="showSection('register-section')">Geri qayıt</button>
     </div>
 </div>
 
 <footer>
     <p>© 2026 DQ Platform – Developed by Yunis İmanov</p>
-    <div style="margin-top: 10px;">
-        <a href="#" onclick="showSection('terms')">İstifadə Şərtləri</a> | 
-        <a href="#" onclick="showSection('privacy')">Məxfilik Siyasəti</a>
+    <div class="footer-links">
+        <a href="#" onclick="showSection('terms-section')">İstifadə Şərtləri</a> | 
+        <a href="#" onclick="showSection('privacy-section')">Məxfilik Siyasəti</a>
     </div>
 </footer>
 
 <script>
-    const correctAnswers = {
-        1: 'c', 2: 'b', 3: 'a', 4: 'd', 5: 'c', 
-        6: 'c', 7: 'a', 8: 'c', 9: 'e', 10: 'e', 
-        11: 'e', 12: 'd', 13: 'd', 14: 'd', 15: 'a', 
-        16: 'a', 17: 'b', 18: 'b', 19: 'e', 20: 'c', 
-        21: 'e', 22: 'c', 23: 'c', 24: 'a', 25: 'a', 
-        26: 'e', 27: 'b', 28: 'e', 29: 'd', 30: 'c'
-    };
-
-    const bookPages = [
-        { title: "Səhifə 1 (Suallar: 1 - 5)", img: "1-5.jpg" },
-        { title: "Səhifə 2 (Suallar: 6 - 11)", img: "6-11.jpg" },
-        { title: "Səhifə 3 (Suallar: 12 - 17)", img: "12-17.jpg" },
-        { title: "Səhifə 4 (Suallar: 18 - 23)", img: "17-23.jpg" },
-        { title: "Səhifə 5 (Suallar: 24 - 28)", img: "24-28.jpg" },
-        { title: "Səhifə 6 (Suallar: 29 - 30)", img: "29-30.jpg" }
-    ];
-
-    let currentPageIndex = 0;
-
-    function generateQuiz() {
-        const pagesContainer = document.getElementById('book-pages-container');
-        const answerSheetGrid = document.getElementById('answer-sheet-grid');
-        
-        let pagesHtml = '';
-        let sheetHtml = '';
-
-        bookPages.forEach((page, index) => {
-            pagesHtml += `
-                <div class="book-page ${index === 0 ? 'active' : ''}" id="page-${index}">
-                    <p style="color: #0f172a; font-weight: bold; margin-bottom: 10px;">${page.title}</p>
-                    <img src="${page.img}" class="question-img" alt="${page.title}">
-                </div>
-            `;
-        });
-
-        for(let i = 1; i <= 30; i++) {
-            sheetHtml += `
-                <div class="answer-row">
-                    <span>Sual ${i}:</span>
-                    <div class="options-group">
-                        <label><input type="radio" name="q${i}" value="a" required><span>A</span></label>
-                        <label><input type="radio" name="q${i}" value="b"><span>B</span></label>
-                        <label><input type="radio" name="q${i}" value="c"><span>C</span></label>
-                        <label><input type="radio" name="q${i}" value="d"><span>D</span></label>
-                        <label><input type="radio" name="q${i}" value="e"><span>E</span></label>
-                    </div>
-                </div>
-            `;
+    function togglePassword(fieldId, icon) {
+        const field = document.getElementById(fieldId);
+        if (field.type === "password") {
+            field.type = "text";
+            icon.innerText = "🙈";
+        } else {
+            field.type = "password";
+            icon.innerText = "👁️";
         }
-
-        pagesContainer.innerHTML = pagesHtml;
-        answerSheetGrid.innerHTML = sheetHtml;
-        updateBookNav();
     }
 
-    function changePage(direction) {
-        currentPageIndex += direction;
-        if (currentPageIndex < 0) currentPageIndex = 0;
-        if (currentPageIndex >= bookPages.length) currentPageIndex = bookPages.length - 1;
-
-        for (let i = 0; i < bookPages.length; i++) {
-            document.getElementById(`page-${i}`).classList.remove('active');
-        }
-        document.getElementById(`page-${currentPageIndex}`).classList.add('active');
-
-        updateBookNav();
-        window.scrollTo({ top: 200, behavior: 'smooth' });
-    }
-
-    function updateBookNav() {
-        document.getElementById('pageIndicator').innerText = `Səhifə ${currentPageIndex + 1} / ${bookPages.length}`;
-        document.getElementById('prevBtn').style.display = (currentPageIndex === 0) ? 'none' : 'inline-block';
-        document.getElementById('nextBtn').style.display = (currentPageIndex === bookPages.length - 1) ? 'none' : 'inline-block';
-    }
-
-    function submitQuiz(event) {
+    function handleRegister(event) {
         event.preventDefault();
-        let score = 0;
-        let total = 30;
+        const name = document.getElementById('regName').value;
+        const phone = document.getElementById('regPhone').value;
+        const email = document.getElementById('regEmail').value;
+        const pass = document.getElementById('regPass').value;
+        const passConfirm = document.getElementById('regPassConfirm').value;
 
-        for(let i = 1; i <= total; i++) {
-            const selected = document.querySelector(`input[name="q${i}"]:checked`);
-            if(selected && selected.value === correctAnswers[i]) {
-                score++;
-            }
+        if (pass !== passConfirm) {
+            alert("Şifrələr bir-biri ilə eyni deyil!");
+            return;
         }
 
-        const resultText = `İmtahan nəticəniz: ${score} düzgün, ${total - score} səhv (${total} sualdan).`;
+        const userData = { name, phone, email, pass };
+        localStorage.setItem('dq_user', JSON.stringify(userData));
         
+        updateSessionUI(userData);
+        alert("Qeydiyyat uğurla tamamlandı!");
+        showSection('profile-section');
+    }
+
+    function handleLogin(event) {
+        event.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const pass = document.getElementById('loginPass').value;
+
         let user = JSON.parse(localStorage.getItem('dq_user'));
-        if(user) {
-            user.lastResult = resultText;
-            localStorage.setItem('dq_user', JSON.stringify(user));
-            document.getElementById('profile-result').innerText = resultText;
-        }
-
-        alert(resultText + "\nNəticəniz Şəxsi Kabinetinizə yadda saxlanıldı!");
-        showSection('profile');
-    }
-
-    let isLoginMode = false;
-
-    function openModal(mode) {
-        isLoginMode = (mode === 'login');
-        document.getElementById('authModal').style.display = 'flex';
-        
-        if(isLoginMode) {
-            document.getElementById('modal-title').innerText = 'Daxil ol';
-            document.getElementById('modal-subtitle').innerText = 'Hesabınıza daxil olmaq üçün məlumatları daxil edin';
-            document.getElementById('modalSubmitBtn').innerText = 'Daxil ol';
-            document.getElementById('nameGroup').style.display = 'none';
-            document.getElementById('nameInput').required = false;
+        if (user && user.email === email) {
+            updateSessionUI(user);
+            alert("Uğurla daxil oldunuz!");
+            showSection('profile-section');
         } else {
-            document.getElementById('modal-title').innerText = 'Qeydiyyat';
-            document.getElementById('modal-subtitle').innerText = 'Yeni hesab yaratmaq üçün məlumatları doldurun';
-            document.getElementById('modalSubmitBtn').innerText = 'Qeydiyyatdan keç';
-            document.getElementById('nameGroup').style.display = 'block';
-            document.getElementById('nameInput').required = true;
+            alert("Belə hesab tapılmadı və ya şifrə səhvdir!");
         }
     }
 
-    function closeModal() {
-        document.getElementById('authModal').style.display = 'none';
+    function loginWithGoogle() {
+        const googleUser = {
+            name: "Yunis İmanov",
+            email: "info@dovletqullugu.info",
+            phone: "+994 70 883 81 00"
+        };
+        localStorage.setItem('dq_user', JSON.stringify(googleUser));
+        updateSessionUI(googleUser);
+        alert("Google hesabı ilə uğurla daxil olundu!");
+        showSection('profile-section');
     }
 
-    function handleAuth(event) {
-        event.preventDefault();
-        const contact = document.getElementById('contactInput').value;
-        const name = isLoginMode ? "İstifadəçi" : document.getElementById('nameInput').value;
-
-        let existingUser = JSON.parse(localStorage.getItem('dq_user')) || {};
-        existingUser.name = name;
-        existingUser.contact = contact;
-
-        localStorage.setItem('dq_user', JSON.stringify(existingUser));
-        checkUserSession();
-        closeModal();
-        alert(isLoginMode ? "Uğurla daxil oldunuz!" : "Qeydiyyat uğurla tamamlandı!");
-    }
-
-    function checkUserSession() {
-        const user = JSON.parse(localStorage.getItem('dq_user'));
-        if(user) {
-            document.getElementById('auth-nav-buttons').style.display = 'none';
-            document.getElementById('user-nav-buttons').style.display = 'flex';
-            document.getElementById('profile-name').innerText = user.name;
-            document.getElementById('profile-contact').innerText = user.contact;
-            if(user.lastResult) {
-                document.getElementById('profile-result').innerText = user.lastResult;
-            }
-        } else {
-            document.getElementById('auth-nav-buttons').style.display = 'flex';
-            document.getElementById('user-nav-buttons').style.display = 'none';
-        }
+    function updateSessionUI(user) {
+        document.getElementById('auth-nav-buttons').style.display = 'none';
+        document.getElementById('user-nav-buttons').style.display = 'flex';
+        document.getElementById('profile-name').innerText = user.name;
+        document.getElementById('profile-email').innerText = user.email;
+        document.getElementById('profile-phone').innerText = user.phone || 'Təyin olunmayıb';
     }
 
     function logout() {
         localStorage.removeItem('dq_user');
-        checkUserSession();
-        showSection('home');
+        document.getElementById('auth-nav-buttons').style.display = 'flex';
+        document.getElementById('user-nav-buttons').style.display = 'none';
+        showSection('register-section');
         alert("Hesabdan çıxış edildi.");
     }
 
-    function checkAndShow(sectionName) {
-        const user = JSON.parse(localStorage.getItem('dq_user'));
-        if(!user) {
-            alert("Zəhmət olmasa əvvəlcə qeydiyyatdan keçin və ya daxil olun!");
-            openModal('login');
-            return;
-        }
-        showSection(sectionName);
-    }
-
-    function showSection(sectionName) {
-        document.getElementById('home-section').style.display = 'none';
-        document.getElementById('sinaqlar-section').style.display = 'none';
-        document.getElementById('tests-section').style.display = 'none';
-        document.getElementById('mentiq-test-section').style.display = 'none';
-        document.getElementById('other-test-section').style.display = 'none';
+    function showSection(sectionId) {
+        document.getElementById('register-section').style.display = 'none';
+        document.getElementById('login-section').style.display = 'none';
         document.getElementById('profile-section').style.display = 'none';
-        document.getElementById('privacy-section').style.display = 'none';
         document.getElementById('terms-section').style.display = 'none';
-        document.getElementById('yenilikler-section').style.display = 'none';
+        document.getElementById('privacy-section').style.display = 'none';
 
-        if(sectionName === 'home') {
-            document.getElementById('home-section').style.display = 'block';
-        } else if(sectionName === 'sinaqlar') {
-            document.getElementById('sinaqlar-section').style.display = 'block';
-        } else if(sectionName === 'tests') {
-            document.getElementById('tests-section').style.display = 'block';
-        } else if(sectionName === 'yenilikler') {
-            document.getElementById('yenilikler-section').style.display = 'block';
-        } else if(sectionName === 'privacy') {
-            document.getElementById('privacy-section').style.display = 'block';
-        } else if(sectionName === 'terms') {
-            document.getElementById('terms-section').style.display = 'block';
-        } else if(sectionName === 'profile') {
-            const user = JSON.parse(localStorage.getItem('dq_user'));
-            if(!user) {
-                openModal('login');
-                document.getElementById('home-section').style.display = 'block';
-                return;
-            }
-            document.getElementById('profile-section').style.display = 'block';
-        }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function openSubject(subjectName) {
-        const user = JSON.parse(localStorage.getItem('dq_user'));
-        if(!user) {
-            alert("Testləri işləmək üçün daxil olmalısınız!");
-            openModal('login');
-            return;
-        }
-
-        document.getElementById('home-section').style.display = 'none';
-        document.getElementById('sinaqlar-section').style.display = 'none';
-        document.getElementById('tests-section').style.display = 'none';
-        document.getElementById('yenilikler-section').style.display = 'none';
-        
-        if(subjectName === 'Məntiq') {
-            document.getElementById('test-title-heading').innerText = "Məntiq üzrə testlər";
-            document.getElementById('mentiq-test-section').style.display = 'block';
-        } else {
-            document.getElementById('other-test-title').innerText = subjectName + " üzrə testlər";
-            document.getElementById('other-test-section').style.display = 'block';
-        }
+        document.getElementById(sectionId).style.display = 'flex';
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     window.onload = function() {
-        checkUserSession();
-        generateQuiz();
+        let user = JSON.parse(localStorage.getItem('dq_user'));
+        if(user) {
+            updateSessionUI(user);
+        }
     };
 </script>
 
 </body>
 </html>
+
