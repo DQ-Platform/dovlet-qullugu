@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DQ Platform - Dövlət Qulluğu İmtahanı</title>
-
 <style>
 *{
     margin:0;
@@ -19,7 +18,7 @@ body{
     line-height:1.6;
 }
 
-/* Üst Əlaqə Paneli */
+/* Ən Üst Əlaqə və Sosial Panel */
 .top-bar {
     background: #00c853;
     padding: 10px 20px;
@@ -155,7 +154,7 @@ nav a:hover, nav button:hover{
     color:#00c853;
 }
 
-/* Hero və Əsas Bölmələr */
+/* Hero Bölmələri */
 .hero-box {
     max-width: 900px;
     margin: 40px auto;
@@ -182,6 +181,7 @@ nav a:hover, nav button:hover{
     margin-right: auto;
 }
 
+/* Düymələr */
 .btn-main-green {
     display: inline-block;
     padding: 14px 30px;
@@ -224,7 +224,7 @@ nav a:hover, nav button:hover{
     transform: translateY(-2px);
 }
 
-/* Kartlar */
+/* Xidmət Kartları */
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -257,7 +257,7 @@ nav a:hover, nav button:hover{
     font-weight:bold;
 }
 
-/* Test Konteyneri */
+/* Test Konteyneri və Səhifələr */
 .test-container {
     max-width: 900px;
     margin: 30px auto;
@@ -294,6 +294,7 @@ nav a:hover, nav button:hover{
     margin: 20px 0;
 }
 
+/* Cavab Kartı */
 .answer-sheet {
     background: #f8f9fa;
     border: 1px solid #e2e8f0;
@@ -356,7 +357,39 @@ nav a:hover, nav button:hover{
     color: #fff;
 }
 
-/* Modallar */
+/* Siyasət və Şərtlər */
+.policy-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.policy-container h2 {
+    color: #0f172a;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.policy-container h3 {
+    color: #0f172a;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.policy-container p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -403,6 +436,43 @@ nav a:hover, nav button:hover{
     margin-bottom: 20px;
 }
 
+.google-btn {
+    width: 100%;
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.google-btn:hover {
+    background: #f1f5f9;
+}
+
+.divider {
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    line-height: 0.1em;
+    margin: 20px 0;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 10px;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 .input-group {
     margin-bottom: 15px;
 }
@@ -433,13 +503,14 @@ nav a:hover, nav button:hover{
     background: #fff;
 }
 
-.profile-container, .policy-container {
-    max-width: 650px;
+.profile-container {
+    max-width: 600px;
     margin: 40px auto;
     background: #fff;
     border: 1px solid #eaeaea;
     border-radius: 20px;
     padding: 35px;
+    text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
@@ -458,11 +529,15 @@ footer a {
     margin: 0 10px;
     font-size: 14px;
 }
+
+footer a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 <body>
 
-<!-- ÜST ƏLAQƏ PANELİ -->
+<!-- ƏN ÜST ƏLAQƏ PANELİ -->
 <div class="top-bar">
     <div class="top-contact">
         <a href="tel:+994506671557">📞 +994 50 667 15 57</a>
@@ -475,7 +550,7 @@ footer a {
     </div>
 </div>
 
-<!-- HEADER -->
+<!-- HEADER VƏ LOGO -->
 <header>
     <div class="logo-area" style="padding-left: 10px;">
         <h1>DQ Platform</h1>
@@ -490,7 +565,7 @@ footer a {
     </div>
 </header>
 
-<!-- NAVİQASİYA -->
+<!-- NAVİQASİYA MENUSU -->
 <nav>
     <a onclick="showSection('home')">Ana səhifə</a>
     <a onclick="checkAndShow('sinaqlar')">Sınaqlar</a>
@@ -498,63 +573,125 @@ footer a {
     <a onclick="showSection('yenilikler')">Yeniliklər</a>
 </nav>
 
-<!-- ANA SƏHİFƏ -->
+<!-- ƏSAS SƏHİFƏ -->
 <div id="home-section">
     <div class="hero-box">
         <h2>Dövlət Qulluğu üçün Sınaq İmtahanları!</h2>
         <p>Real imtahan təcrübəsi əsasında hazırlanmış sınaq imtahanları, fənn testləri və PDF materiallar.</p>
+
         <div>
             <button class="btn-main-green" onclick="checkAndShow('sinaqlar')">🎓 Sınaqlara Bax</button>
             <button class="btn-main-dark" onclick="openModal('register')">👤 Qeydiyyatdan Keç və İndi Başla</button>
         </div>
+        
+        <div style="margin-top: 25px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+            <a href="https://t.me/dovlettqullugu" target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px;">📢 Telegram Kanal</a>
+            <a href="https://t.me/+dovletqullugu_qrup" target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px;">👥 Telegram Qrup</a>
+            <a href="https://whatsapp.com/channel/..." target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px; background: #00c853;">📢 WhatsApp Kanal</a>
+            <a href="https://chat.whatsapp.com/GIb2EwwiXXg3PpEJWZVKss" target="_blank" class="btn-main-dark" style="font-size: 13px; padding: 10px 18px; background: #00c853;">💬 WhatsApp Qrup</a>
+        </div>
+    </div>
+
+    <section>
+        <h2 style="text-align:center; color:#0f172a; font-size:28px; margin-bottom: 10px;">Bizim Xidmətlərimiz</h2>
+        <div class="cards">
+            <div class="card" onclick="checkAndShow('sinaqlar')">
+                <p class="card-title">SINAQLAR</p>
+                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Ümumi imtahan sınaqları</p>
+            </div>
+            <div class="card" onclick="checkAndShow('tests')">
+                <p class="card-title">TESTLƏR</p>
+                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Fənlər üzrə testlər</p>
+            </div>
+            <div class="card" onclick="showSection('yenilikler')">
+                <p class="card-title">YENİLİKLƏR</p>
+                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Elanlar və xəbərlər</p>
+            </div>
+            <div class="card" onclick="showSection('home')">
+                <p class="card-title">PDF MATERİAL</p>
+                <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Dərs vəsaitləri</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- YENİLİKLƏR SƏHİFƏSİ -->
+<div id="yenilikler-section" style="display:none;">
+    <div class="hero-box" style="max-width: 750px;">
+        <h2 style="color:#0f172a;">Elanlar və Yeniliklər</h2>
+        <p>Platformadakı son elanlar və yenilənmiş posterlər:</p>
+        
+        <div style="margin: 20px 0;">
+            <img src="əli poster.jpg" alt="Yenilik Elanı" style="max-width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        </div>
+
+        <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
     </div>
 </div>
 
-<!-- SINAQLAR -->
+<!-- ÜMUMİ SINAQLAR SƏHİFƏSİ -->
 <div id="sinaqlar-section" style="display:none;">
     <div class="hero-box" style="max-width: 700px;">
         <h2 style="color:#0f172a;">Ümumi Sınaqlar</h2>
         <p>İştirak etmək istədiyiniz sınaq seçimini edin:</p>
+        
         <div class="cards" style="max-width: 500px; margin-bottom: 20px;">
             <div class="card" onclick="window.location.href='https://dq-platform.github.io/Dq-test/'">
                 <p class="card-title">Ümumi Sınaq 1</p>
                 <p style="font-size: 12px; color: #64748b; margin-top: 4px;">Blok imtahanı</p>
             </div>
+            <div class="card" onclick="alert('Ümumi Sınaq 2 tezliklə əlavə olunacaq!')">
+                <p class="card-title">Ümumi Sınaq 2</p>
+                <p style="font-size: 12px; color: #64748b; margin-top: 4px;">Sınaq 2</p>
+            </div>
         </div>
         <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
     </div>
 </div>
 
-<!-- TESTLƏR MENUSU -->
+<!-- FƏNN TESTLƏRİ SƏHİFƏSİ -->
 <div id="tests-section" style="display:none;">
     <div class="hero-box" style="max-width: 750px;">
         <h2 style="color:#0f172a;">Fənn Testləri</h2>
         <p>İmtahana hazırlaşmaq istədiyiniz fənni seçin:</p>
+        
         <div class="cards" style="max-width: 650px; margin-bottom: 20px;">
-            <div class="card" onclick="openSubject('Azərbaycan dili')"><p class="card-title">Azərbaycan dili</p></div>
-            <div class="card" onclick="openSubject('Qanunvericilik')"><p class="card-title">Qanunvericilik</p></div>
-            <div class="card" onclick="openSubject('İnformatika')"><p class="card-title">İnformatika</p></div>
-            <div class="card" onclick="openSubject('Məntiq')"><p class="card-title">Məntiq</p></div>
+            <div class="card" onclick="openSubject('Azərbaycan dili')">
+                <p class="card-title">Azərbaycan dili</p>
+            </div>
+            <div class="card" onclick="openSubject('Qanunvericilik')">
+                <p class="card-title">Qanunvericilik</p>
+            </div>
+            <div class="card" onclick="openSubject('İnformatika')">
+                <p class="card-title">İnformatika</p>
+            </div>
+            <div class="card" onclick="openSubject('Məntiq')">
+                <p class="card-title">Məntiq</p>
+            </div>
         </div>
         <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
     </div>
 </div>
 
-<!-- MƏNTİQ TESTİ -->
+<!-- KİTABÇA / MƏNTİQ TESTİ SƏHİFƏSİ -->
 <div id="mentiq-test-section" style="display:none;">
     <div class="test-container">
         <h2 id="test-title-heading" style="color:#0f172a; text-align:center; margin-bottom:15px;">Məntiq Testləri</h2>
+        
         <form id="logicQuizForm" onsubmit="submitQuiz(event)">
             <div id="book-pages-container"></div>
+
             <div class="book-nav">
                 <button type="button" class="btn-main-dark" id="prevBtn" onclick="changePage(-1)">⬅️ Əvvəlki</button>
                 <span id="pageIndicator" style="color: #0f172a; font-weight: bold;">Səhifə 1 / 6</span>
                 <button type="button" class="btn-main-green" id="nextBtn" onclick="changePage(1)">Növbəti ➡️</button>
             </div>
+
             <div class="answer-sheet">
                 <h3>📋 Cavab Kartı</h3>
                 <div class="answer-grid" id="answer-sheet-grid"></div>
             </div>
+
             <button type="submit" class="btn-main-green" style="width:100%; margin-top:25px; padding: 15px; font-size: 16px;">Nəticəni Yoxla və Göndər</button>
         </form>
         <br>
@@ -571,32 +708,40 @@ footer a {
     </div>
 </div>
 
-<!-- YENİLİKLƏR -->
-<div id="yenilikler-section" style="display:none;">
-    <div class="hero-box" style="max-width: 750px;">
-        <h2 style="color:#0f172a;">Elanlar və Yeniliklər</h2>
-        <div style="margin: 20px 0;">
-            <img src="əli poster.jpg" alt="Yenilik Elanı" style="max-width: 100%; border-radius: 12px; border: 1px solid #e2e8f0;">
-        </div>
-        <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
+<div id="terms-section" style="display:none;">
+    <div class="policy-container">
+        <h2>İstifadə Şərtləri</h2>
+        <h3>1. Ümumi Məlumat</h3>
+        <p>Bu istifadə şərtləri platformadan istifadə edən şəxslər üçün keçərlidir.</p>
+        <br>
+        <button class="btn-main-dark" onclick="showSection('home')" style="width:100%;">Ana səhifəyə qayıt</button>
     </div>
 </div>
 
-<!-- ŞƏXSİ KABİNET -->
+<div id="privacy-section" style="display:none;">
+    <div class="policy-container">
+        <h2>Məxfilik Siyasəti</h2>
+        <h3>1. Ümumi Məlumat</h3>
+        <p>İstifadəçilərin şəxsi məlumatlarının qorunması prinsiplərini müəyyən edir.</p>
+        <br>
+        <button class="btn-main-dark" onclick="showSection('home')" style="width:100%;">Ana səhifəyə qayıt</button>
+    </div>
+</div>
+
 <div id="profile-section" style="display:none;">
-    <div class="profile-container" style="text-align: center;">
+    <div class="profile-container">
         <h2 style="color:#0f172a; margin-bottom:15px;">Şəxsi Kabinet</h2>
-        <p><b>Ad və Soyad:</b> <span id="profile-name"></span></p>
-        <p><b>İstifadəçi adı / Email:</b> <span id="profile-contact"></span></p>
+        <p><b>Ad/İstifadəçi:</b> <span id="profile-name"></span></p>
+        <p><b>Əlaqə:</b> <span id="profile-contact"></span></p>
         <hr style="border-color: #eaeaea; margin: 20px 0;">
-        <h3 style="color:#0f172a; margin-bottom:10px;">Son İmtahan Nəticəniz</h3>
+        <h3 style="color:#0f172a; margin-bottom:10px;">Sınaq Nəticələrim</h3>
         <p id="profile-result" style="color:#64748b;">Hələ ki heç bir sınaqda iştirak etməmisiniz.</p>
         <br>
         <button class="btn-main-dark" onclick="showSection('home')">Ana səhifəyə qayıt</button>
     </div>
 </div>
 
-<!-- MODAL (QEYDİYYAT VƏ GİRİŞ) -->
+<!-- QEYDİYYAT / DAXİL OL MODALI -->
 <div id="authModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -604,14 +749,14 @@ footer a {
         <p class="sub-text" id="modal-subtitle">Hesabınıza daxil olmaq üçün məlumatları daxil edin</p>
         
         <form id="authForm" onsubmit="handleAuth(event)">
-            <div class="input-group" id="nameGroup" style="display:none;">
+            <div class="input-group" id="nameGroup">
                 <label>Ad və Soyad</label>
                 <input type="text" id="nameInput" placeholder="Adınızı daxil edin">
             </div>
 
             <div class="input-group">
                 <label>İstifadəçi adı və ya Email</label>
-                <input type="text" id="contactInput" placeholder="Məsələn: user@mail.com" required>
+                <input type="text" id="contactInput" placeholder="İstifadəçi adı və ya email" required>
             </div>
 
             <div class="input-group">
@@ -626,6 +771,10 @@ footer a {
 
 <footer>
     <p>© 2026 DQ Platform – Developed by Yunis İmanov</p>
+    <div style="margin-top: 10px;">
+        <a href="#" onclick="showSection('terms')">İstifadə Şərtləri</a> | 
+        <a href="#" onclick="showSection('privacy')">Məxfilik Siyasəti</a>
+    </div>
 </footer>
 
 <script>
@@ -648,7 +797,6 @@ footer a {
     ];
 
     let currentPageIndex = 0;
-    let isLoginMode = true;
 
     function generateQuiz() {
         const pagesContainer = document.getElementById('book-pages-container');
@@ -695,6 +843,7 @@ footer a {
             document.getElementById(`page-${i}`).classList.remove('active');
         }
         document.getElementById(`page-${currentPageIndex}`).classList.add('active');
+
         updateBookNav();
         window.scrollTo({ top: 200, behavior: 'smooth' });
     }
@@ -704,6 +853,33 @@ footer a {
         document.getElementById('prevBtn').style.display = (currentPageIndex === 0) ? 'none' : 'inline-block';
         document.getElementById('nextBtn').style.display = (currentPageIndex === bookPages.length - 1) ? 'none' : 'inline-block';
     }
+
+    function submitQuiz(event) {
+        event.preventDefault();
+        let score = 0;
+        let total = 30;
+
+        for(let i = 1; i <= total; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if(selected && selected.value === correctAnswers[i]) {
+                score++;
+            }
+        }
+
+        const resultText = `İmtahan nəticəniz: ${score} düzgün, ${total - score} səhv (${total} sualdan).`;
+        
+        let user = JSON.parse(localStorage.getItem('dq_user'));
+        if(user) {
+            user.lastResult = resultText;
+            localStorage.setItem('dq_user', JSON.stringify(user));
+            document.getElementById('profile-result').innerText = resultText;
+        }
+
+        alert(resultText + "\nNəticəniz Şəxsi Kabinetinizə yadda saxlanıldı!");
+        showSection('profile');
+    }
+
+    let isLoginMode = false;
 
     function openModal(mode) {
         isLoginMode = (mode === 'login');
@@ -730,54 +906,29 @@ footer a {
 
     function handleAuth(event) {
         event.preventDefault();
-        const contact = document.getElementById('contactInput').value.trim();
-        const pass = document.getElementById('passInput').value;
+        const contact = document.getElementById('contactInput').value;
+        const name = isLoginMode ? "İstifadəçi" : document.getElementById('nameInput').value;
 
-        let usersList = JSON.parse(localStorage.getItem('dq_users_db')) || [];
+        let existingUser = JSON.parse(localStorage.getItem('dq_user')) || {};
+        existingUser.name = name;
+        existingUser.contact = contact;
 
-        if (isLoginMode) {
-            let foundUser = usersList.find(u => u.contact === contact && u.pass === pass);
-            if (foundUser) {
-                localStorage.setItem('dq_active_user', JSON.stringify(foundUser));
-                checkUserSession();
-                closeModal();
-                alert("Uğurla daxil oldunuz!");
-            } else {
-                alert("İstifadəçi adı və ya şifrə səhvdir!");
-            }
-        } else {
-            const name = document.getElementById('nameInput').value.trim();
-            let existing = usersList.find(u => u.contact === contact);
-            if(existing) {
-                alert("Bu istifadəçi adı və ya email artıq qeydiyyatdan keçib!");
-                return;
-            }
-
-            const newUser = {
-                name: name,
-                contact: contact,
-                pass: pass,
-                lastResult: "Hələ ki heç bir sınaqda iştirak etməmisiniz."
-            };
-
-            usersList.push(newUser);
-            localStorage.setItem('dq_users_db', JSON.stringify(usersList));
-            localStorage.setItem('dq_active_user', JSON.stringify(newUser));
-
-            checkUserSession();
-            closeModal();
-            alert("Qeydiyyat uğurla tamamlandı!");
-        }
+        localStorage.setItem('dq_user', JSON.stringify(existingUser));
+        checkUserSession();
+        closeModal();
+        alert(isLoginMode ? "Uğurla daxil oldunuz!" : "Qeydiyyat uğurla tamamlandı!");
     }
 
     function checkUserSession() {
-        const user = JSON.parse(localStorage.getItem('dq_active_user'));
+        const user = JSON.parse(localStorage.getItem('dq_user'));
         if(user) {
             document.getElementById('auth-nav-buttons').style.display = 'none';
             document.getElementById('user-nav-buttons').style.display = 'flex';
             document.getElementById('profile-name').innerText = user.name;
             document.getElementById('profile-contact').innerText = user.contact;
-            document.getElementById('profile-result').innerText = user.lastResult || "Hələ ki heç bir sınaqda iştirak etməmisiniz.";
+            if(user.lastResult) {
+                document.getElementById('profile-result').innerText = user.lastResult;
+            }
         } else {
             document.getElementById('auth-nav-buttons').style.display = 'flex';
             document.getElementById('user-nav-buttons').style.display = 'none';
@@ -785,16 +936,16 @@ footer a {
     }
 
     function logout() {
-        localStorage.removeItem('dq_active_user');
+        localStorage.removeItem('dq_user');
         checkUserSession();
         showSection('home');
         alert("Hesabdan çıxış edildi.");
     }
 
     function checkAndShow(sectionName) {
-        const user = JSON.parse(localStorage.getItem('dq_active_user'));
+        const user = JSON.parse(localStorage.getItem('dq_user'));
         if(!user) {
-            alert("Zəhmət olmasa əvvəlcə daxil olun!");
+            alert("Zəhmət olmasa əvvəlcə qeydiyyatdan keçin və ya daxil olun!");
             openModal('login');
             return;
         }
@@ -802,73 +953,61 @@ footer a {
     }
 
     function showSection(sectionName) {
-        ['home-section', 'sinaqlar-section', 'tests-section', 'mentiq-test-section', 'other-test-section', 'yenilikler-section', 'profile-section'].forEach(id => {
-            document.getElementById(id).style.display = 'none';
-        });
+        document.getElementById('home-section').style.display = 'none';
+        document.getElementById('sinaqlar-section').style.display = 'none';
+        document.getElementById('tests-section').style.display = 'none';
+        document.getElementById('mentiq-test-section').style.display = 'none';
+        document.getElementById('other-test-section').style.display = 'none';
+        document.getElementById('profile-section').style.display = 'none';
+        document.getElementById('privacy-section').style.display = 'none';
+        document.getElementById('terms-section').style.display = 'none';
+        document.getElementById('yenilikler-section').style.display = 'none';
 
-        if(sectionName === 'home') document.getElementById('home-section').style.display = 'block';
-        if(sectionName === 'sinaqlar') document.getElementById('sinaqlar-section').style.display = 'block';
-        if(sectionName === 'tests') document.getElementById('tests-section').style.display = 'block';
-        if(sectionName === 'yenilikler') document.getElementById('yenilikler-section').style.display = 'block';
-        if(sectionName === 'profile') {
-            const user = JSON.parse(localStorage.getItem('dq_active_user'));
-            if(!user) { openModal('login'); return; }
+        if(sectionName === 'home') {
+            document.getElementById('home-section').style.display = 'block';
+        } else if(sectionName === 'sinaqlar') {
+            document.getElementById('sinaqlar-section').style.display = 'block';
+        } else if(sectionName === 'tests') {
+            document.getElementById('tests-section').style.display = 'block';
+        } else if(sectionName === 'yenilikler') {
+            document.getElementById('yenilikler-section').style.display = 'block';
+        } else if(sectionName === 'privacy') {
+            document.getElementById('privacy-section').style.display = 'block';
+        } else if(sectionName === 'terms') {
+            document.getElementById('terms-section').style.display = 'block';
+        } else if(sectionName === 'profile') {
+            const user = JSON.parse(localStorage.getItem('dq_user'));
+            if(!user) {
+                openModal('login');
+                document.getElementById('home-section').style.display = 'block';
+                return;
+            }
             document.getElementById('profile-section').style.display = 'block';
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function openSubject(subjectName) {
-        const user = JSON.parse(localStorage.getItem('dq_active_user'));
+        const user = JSON.parse(localStorage.getItem('dq_user'));
         if(!user) {
             alert("Testləri işləmək üçün daxil olmalısınız!");
             openModal('login');
             return;
         }
 
-        ['home-section', 'sinaqlar-section', 'tests-section', 'yenilikler-section'].forEach(id => {
-            document.getElementById(id).style.display = 'none';
-        });
+        document.getElementById('home-section').style.display = 'none';
+        document.getElementById('sinaqlar-section').style.display = 'none';
+        document.getElementById('tests-section').style.display = 'none';
+        document.getElementById('yenilikler-section').style.display = 'none';
         
         if(subjectName === 'Məntiq') {
+            document.getElementById('test-title-heading').innerText = "Məntiq üzrə testlər";
             document.getElementById('mentiq-test-section').style.display = 'block';
         } else {
             document.getElementById('other-test-title').innerText = subjectName + " üzrə testlər";
             document.getElementById('other-test-section').style.display = 'block';
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function submitQuiz(event) {
-        event.preventDefault();
-        let score = 0;
-        let total = 30;
-
-        for(let i = 1; i <= total; i++) {
-            const selected = document.querySelector(`input[name="q${i}"]:checked`);
-            if(selected && selected.value === correctAnswers[i]) {
-                score++;
-            }
-        }
-
-        const resultText = `İmtahan nəticəniz: ${score} düzgün, ${total - score} səhv (${total} sualdan).`;
-        
-        let user = JSON.parse(localStorage.getItem('dq_active_user'));
-        if(user) {
-            user.lastResult = resultText;
-            localStorage.setItem('dq_active_user', JSON.stringify(user));
-
-            let usersList = JSON.parse(localStorage.getItem('dq_users_db')) || [];
-            let uIndex = usersList.findIndex(u => u.contact === user.contact);
-            if(uIndex !== -1) {
-                usersList[uIndex].lastResult = resultText;
-                localStorage.setItem('dq_users_db', JSON.stringify(usersList));
-            }
-            document.getElementById('profile-result').innerText = resultText;
-        }
-
-        alert(resultText + "\nNəticəniz Şəxsi Kabinetinizə yadda saxlanıldı!");
-        showSection('profile');
     }
 
     window.onload = function() {
@@ -879,3 +1018,4 @@ footer a {
 
 </body>
 </html>
+
